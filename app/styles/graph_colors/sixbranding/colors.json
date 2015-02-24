@@ -1,0 +1,12 @@
+[
+  { "rgb": "73,110,130", "name": "Teal" },
+  { "rgb": "216,190,139", "name": "Sand" },
+  { "rgb": "108,4,68", "name": "Aubergine" },
+  { "rgb": "173,163,152", "name": "Clay" },
+  { "rgb": "73,47,20", "name": "Cocoa" },
+  { "rgb": "130,191,207", "name": "Cornflower" },
+  { "rgb": "70,72,27", "name": "Grove" },
+  { "rgb": "212,105,0", "name": "Tangerine" },
+  { "rgb": "0,64,70", "name": "Laurel" },
+  { "rgb": "195,203,0", "name": "Olive" }
+]
