@@ -13,6 +13,13 @@
           <h3><a href="http://d3js.org" target="_blank">D3.js</a> Library:</h3>
           <bars-chart chart-data="myData"></bars-chart>
         </div>
+        <div class="col-md-12 chartexample" style="height:380px;">
+          <h3><a href="http://angular-ui.github.io/angular-google-maps/#!/api" target="_blank">Google Maps</a> Library:</h3>
+          <ui-gmap-google-map center="map.center" zoom="map.zoom" height="380">
+            <ui-gmap-polyline ng-repeat="p in polylines" path="p.path" stroke="p.stroke" visible='p.visible'
+                              geodesic='p.geodesic' fit="false" editable="p.editable" draggable="p.draggable" icons='p.icons'></ui-gmap-polyline>
+          </ui-gmap-google-map>
+        </div>
 
         <div class="col-md-12 chartexample">
           <h3><a href="http://www.highcharts.com/maps/demo" target="_blank">Highmaps</a> Library:</h3>

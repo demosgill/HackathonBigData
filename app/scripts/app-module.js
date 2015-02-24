@@ -6,6 +6,7 @@ angular.module('app', [
   'ngSanitize',
   'ngRoute',
 
+  'uiGmapgoogle-maps',
   'highcharts-directive',
   'pascalprecht.translate',
   'ng-breadcrumbs',
@@ -30,7 +31,12 @@ angular.module('app', [
       }
     };
   })
-  .config(function ($locationProvider, $routeProvider) {
+  .config(function ($locationProvider, $routeProvider, uiGmapGoogleMapApiProvider) {
+    uiGmapGoogleMapApiProvider.configure({
+      //    key: 'your api key',
+      v: '3.17',
+      libraries: 'weather,geometry,visualization'
+    });
 
     $locationProvider.html5Mode(false); // make sure future angular versions won't use html5 mode (IE 8 doesn't support that)
 

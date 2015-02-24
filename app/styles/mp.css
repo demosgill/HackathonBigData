@@ -225,3 +225,8 @@ div.chartexample {
   border-radius: 5px;
   background-color: #dddddd;
 }
+
+.angular-google-map-container {
+  height: 300px;
+  border: 1px solid gray;
+}

@@ -4,7 +4,47 @@
 
 angular.module('basic')
   .controller('BasicCtrl',
-  function ($scope) {
+  function ($scope, uiGmapGoogleMapApi) {
+
+
+    uiGmapGoogleMapApi.then(function (/*maps*/) {
+      $scope.map = {center: {latitude: 40.1451, longitude: -99.6680}, zoom: 4};
+    });
+    $scope.polylines = [
+      {
+        id: 1,
+        path: [
+          {
+            latitude: 45,
+            longitude: -74
+          },
+          {
+            latitude: 30,
+            longitude: -89
+          },
+          {
+            latitude: 37,
+            longitude: -122
+          },
+          {
+            latitude: 60,
+            longitude: -95
+          }
+        ],
+        stroke: {
+          color: '#6060FB',
+          weight: 3
+        },
+        editable: true,
+        draggable: true,
+        geodesic: true,
+        visible: true,
+        icons: [{
+          offset: '25px',
+          repeat: '50px'
+        }]
+      }];
+
     $scope.myData = [10, 20, 50, 30, 15, 77];
 
     $(function () {
@@ -16,7 +56,7 @@ angular.module('basic')
           // Read the columns into the data array
           var data = [];
           $.each(columns[0], function (i, code) {
-            if(i > 0) {
+            if (i > 0) {
               data.push({
                 code: code.toUpperCase(),
                 value: parseFloat(columns[3][i]),
@@ -28,8 +68,8 @@ angular.module('basic')
 
           // Initiate the chart
           $('#mapcontainer').highcharts('Map', {
-            chart : {
-              borderWidth : 1
+            chart: {
+              borderWidth: 1
             },
             exporting: {
               enabled: false
@@ -37,8 +77,8 @@ angular.module('basic')
             colors: ['rgba(19,64,117,0.05)', 'rgba(19,64,117,0.2)', 'rgba(19,64,117,0.4)',
               'rgba(19,64,117,0.5)', 'rgba(19,64,117,0.6)', 'rgba(19,64,117,0.8)', 'rgba(19,64,117,1)'],
 
-            title : {
-              text : 'Revenue by country'
+            title: {
+              text: 'Revenue by country'
             },
 
             mapNavigation: {
@@ -85,8 +125,8 @@ angular.module('basic')
               }]
             },
 
-            series : [{
-              data : data,
+            series: [{
+              data: data,
               mapData: Highcharts.maps['custom/world'],
               joinBy: ['iso-a2', 'code'],
               animation: true,
@@ -218,4 +258,5 @@ angular.module('basic')
       });
     });
 
-  });
+  })
+;
