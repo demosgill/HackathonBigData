@@ -8,6 +8,108 @@ angular.module('basic')
     $scope.myData = [10, 20, 50, 30, 15, 77];
 
     $(function () {
+      Highcharts.data({
+        csv: document.getElementById('kicountryall').innerHTML,
+        itemDelimiter: '\t',
+        parsed: function (columns) {
+
+          // Read the columns into the data array
+          var data = [];
+          $.each(columns[0], function (i, code) {
+            if(i > 0) {
+              data.push({
+                code: code.toUpperCase(),
+                value: parseFloat(columns[3][i]),
+                name: code.toUpperCase()
+              });
+            }
+          });
+
+
+          // Initiate the chart
+          $('#mapcontainer').highcharts('Map', {
+            chart : {
+              borderWidth : 1
+            },
+            exporting: {
+              enabled: false
+            },
+            colors: ['rgba(19,64,117,0.05)', 'rgba(19,64,117,0.2)', 'rgba(19,64,117,0.4)',
+              'rgba(19,64,117,0.5)', 'rgba(19,64,117,0.6)', 'rgba(19,64,117,0.8)', 'rgba(19,64,117,1)'],
+
+            title : {
+              text : 'Revenue by country'
+            },
+
+            mapNavigation: {
+              enabled: true
+            },
+
+            legend: {
+              title: {
+                text: 'CHF',
+                style: {
+                  color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                }
+              },
+              align: 'left',
+              verticalAlign: 'bottom',
+              floating: true,
+              layout: 'vertical',
+              valueDecimals: 0,
+              backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || 'rgba(255, 255, 255, 0.85)',
+              symbolRadius: 0,
+              symbolHeight: 14
+            },
+
+            colorAxis: {
+              dataClasses: [{
+                to: 50
+              }, {
+                from: 50,
+                to: 1000
+              }, {
+                from: 1000,
+                to: 5000
+              }, {
+                from: 5000,
+                to: 10000
+              }, {
+                from: 10000,
+                to: 30000
+              }, {
+                from: 30000,
+                to: 100000
+              }, {
+                from: 100000
+              }]
+            },
+
+            series : [{
+              data : data,
+              mapData: Highcharts.maps['custom/world'],
+              joinBy: ['iso-a2', 'code'],
+              animation: true,
+              name: 'Umsatz',
+              states: {
+                hover: {
+                  color: '#BADA55'
+                }
+              },
+              tooltip: {
+                valueSuffix: ' CHF'
+              }
+            }]
+          });
+        },
+        error: function () {
+          $('#container').html('<div class="loading">' +
+          '<i class="icon-frown icon-large"></i> ' +
+          'Error loading data from Google Spreadsheets' +
+          '</div>');
+        }
+      });
+
 
       Highcharts.data({
         csv: document.getElementById('mccs').innerHTML,
