@@ -31,7 +31,7 @@ set HTTPS_PROXY=http://user:pw@proxy:8080
 =====================================================================================
 --- Build
 1. npm install
-2. bower installnpm
+2. bower install
 
 --- Run
 1. gulp dev
