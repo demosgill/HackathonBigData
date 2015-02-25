@@ -1,22 +1,23 @@
 =====================================================================================
 --- Basic Set Up
-1. Install nodejs, set proxy (see below)
-2. npm install -g bower
-3. npm install -g grunt-cli
+1. Install Git (download from http://git-scm.com/downloads)
+2. Install nodejs (download from http://nodejs.org/download)
+3. if needed, set proxy (see below)
 4. npm install -g gulp
+5. npm install -g bower
 
 =====================================================================================
 --- Configuration
 
---- git, %USERPROFILE%\.gitconfig
+--- git, %USERPROFILE%\.gitconfig (edit manually or execute the following commands)
 git config --global http.proxy http://user:pw@proxy:8080
 git config --global url."https://".insteadOf git://
 
---- npm, %USERPROFILE%\.npmrc
+--- npm, %USERPROFILE%\.npmrc (edit manually or execute the following commands)
 npm config set proxy http://user:pw@proxy:8080
 npm config set https-proxy http://user:pw@proxy:8080
 
---- bower, %USERPROFILE%\.bowerrc
+--- bower, %USERPROFILE%\.bowerrc (edit manually, file is in json format)
 {
 	"proxy":"http://user:pw@proxy:8080",
 	"https-proxy":"http://user:pw@proxy:8080"

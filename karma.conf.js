@@ -29,6 +29,7 @@ module.exports = function (config) {
       'bower_components/valdr/valdr.js',
       'bower_components/highcharts/highcharts.js',
       'bower_components/highmaps/modules/map.js',
+      'bower_components/angular-google-maps/dist/angular-google-maps.js',
       'test/test-util.js',
       'app/scripts/**/*-module.js',
       'app/scripts/**/*.js',

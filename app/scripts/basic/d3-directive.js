@@ -1,9 +1,10 @@
+/*global d3:false*/
 'use strict';
 
 angular.module('basic').
   //camel cased directive name
   //in your HTML, this will be named as bars-chart
-  directive('barsChart', function ($parse) {
+  directive('barsChart', function () {
     //explicitly creating a directive definition variable
     //this may look verbose but is good for clarification purposes
     //in real life you'd want to simply return the object {...}
@@ -19,7 +20,7 @@ angular.module('basic').
       //our data source would be an array
       //passed thru chart-data attribute
       scope: {data: '=chartData'},
-      link: function (scope, element, attrs) {
+      link: function (scope, element) {
         //in D3, any selection[0] contains the group
         //selection[0][0] is the DOM node
         //but we won't need that this time
@@ -27,12 +28,12 @@ angular.module('basic').
         //to our original directive markup bars-chart
         //we add a div with out chart stling and bind each
         //data entry to the chart
-        chart.append("div").attr("class", "chart")
+        chart.append('div').attr('class', 'chart')
           .selectAll('div')
-          .data(scope.data).enter().append("div")
-          .transition().ease("elastic")
-          .style("width", function(d) { return d + "%"; })
-          .text(function(d) { return d + "%"; });
+          .data(scope.data).enter().append('div')
+          .transition().ease('elastic')
+          .style('width', function(d) { return d + '%'; })
+          .text(function(d) { return d + '%'; });
         //a little of magic: setting it's width based
         //on the data value (d)
         //and text all with a smooth transition
