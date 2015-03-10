@@ -1,0 +1,29 @@
+My questions:
+
+ How can we display the flow of customers?
+ Can we do an animation?
+
+
+Customer questions to answer:
+
+ How travel Chinese tourists Switzerland?
+ What is the difference of the behavior of European, American and Asian visitors?
+ Show card holder country on a world map and how much money they spend for what
+ Where should I open the next clock & jewelry store and why?
+
+What do I offer?
+
+ An interesting topic in the field of BigData.
+ Preferred Technology: HTML5 / CSS3 with Angular JS / Bootstrap / node.js
+ A USB stick containing tons of node modules, bower components (Angular, highcharts, highmaps, d3, google maps)
+ An empty Angular project which is also located on GitHub.
+ Project on GitHub https://github.com/rowsix/HackathonBigData.git 
+ An Excel file containing data regarding customer flow.
+
+
+What do I expect?
+
+ A prototype, concept or ideas how to visualize the customer flow
+ Answer some of the customers questions in a simple way.
+ A world map with card holder country and data
+ Any crazy idea regarding BigData is welcome.
