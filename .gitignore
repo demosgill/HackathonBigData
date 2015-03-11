@@ -1,11 +1,27 @@
-# Build and Release Folders
-bin/
-bin-debug/
-bin-release/
-
-# Other files and folders
-.settings/
-
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+node_modules
+dist
+prod
+.tmp
+.sass-cache
+bower_components
+karma_html
+karma_junit
+karma_unit
+target
+coverage
+e2e
+*.war
+*.log
+.project
+.classpath
+!test/e2e
+.bowerrc-private
+/bin/
+org.eclipse.wst.common.project.facet.core.xml
+dev
+shelf
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/uiDesigner.xml
+.idea/copyright/*
+.idea/scopes/*

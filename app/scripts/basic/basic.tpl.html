@@ -1,0 +1,58 @@
+<div class="content-section-a" style="margin-top:50px;">
+
+  <div class="container">
+    <h1>Customer Flow</h1>
+
+    <div class="row">
+      <div class="col-md-4" style="background-color: yellow;">
+        (add charts here)
+      </div>
+      <div class="col-md-6 col-md-offset-2 row">
+        (delete this column)
+        <div class="col-md-12 chartexample">
+          <h3><a href="http://d3js.org" target="_blank">D3.js</a> Library:</h3>
+          <bars-chart chart-data="myData"></bars-chart>
+        </div>
+        <div class="col-md-12 chartexample" style="height:380px;">
+          <h3><a href="http://angular-ui.github.io/angular-google-maps/#!/api" target="_blank">Google Maps</a> Library:</h3>
+          <ui-gmap-google-map center="map.center" zoom="map.zoom" height="380">
+            <ui-gmap-polyline ng-repeat="p in polylines" path="p.path" stroke="p.stroke" visible='p.visible'
+                              geodesic='p.geodesic' fit="false" editable="p.editable" draggable="p.draggable" icons='p.icons'></ui-gmap-polyline>
+          </ui-gmap-google-map>
+        </div>
+
+        <div class="col-md-12 chartexample">
+          <h3><a href="http://www.highcharts.com/maps/demo" target="_blank">Highmaps</a> Library:</h3>
+
+          <div id="mapcontainer"></div>
+        </div>
+
+        <div class="col-md-12 chartexample">
+          <h3><a href="http://www.highcharts.com" target="_blank">Highcharts</a> Library:</h3>
+
+          <div id="mccpie"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+</div>
+
+<pre id="mccs" style="display:none">PARTNERNAME	MCC	TOTALAMT
+Coffee und Shop	Restaurants	3000
+Customer Services	Bergbahnen	2500
+Souvenir Shop	Souvenir Shops	17000
+Hotel und Gastronomie	Hotels	30000
+Info und Shop	Souvenir Shops	9000
+Restaurant Chalet	Restaurants	1000
+</pre>
+
+<pre id="kicountryall" style="display:none">KICOUNTISO2	NUMBEROFTRX	AVGTRXAMT
+CH	5662	87.79	500000
+US	1879	69.08	120000
+CN	1335	93.14	130000
+DE	807	117.54	85000
+GB	551	150.7	82000
+</pre>
