@@ -150,7 +150,6 @@ angular.module('basic')
         }
       });
 
-
       Highcharts.data({
         csv: document.getElementById('mccs').innerHTML,
         itemDelimiter: '\t',
@@ -234,7 +233,7 @@ angular.module('basic')
               series: {
                 dataLabels: {
                   enabled: true,
-                  format: '{point.name}: {point.y:.2f} Fr.<br/>({point.percentage:.2f}%)'
+                  format: '{point.name}: {point.y:.2f} <br/>({point.percentage:.2f}%)'
                 }
               }
             },
@@ -256,7 +255,119 @@ angular.module('basic')
           });
         }
       });
+
     });
+
+    $(function () {
+      Highcharts.data({
+        csv: document.getElementById('touristsluonly0').innerHTML,
+        itemDelimiter: '\t',
+        parsed: function (columns) {
+
+          var tourists = {},
+            countryData = [],
+            mccDrilldownData = {},
+            mccDrilldownSeries = [],
+            mccs = [];
+
+          // Parse percentage strings
+          $.each(columns[1], function (i, country) {
+            if (i > 0) {
+
+              // Create the main data
+              var avt = parseFloat(columns[2][i]);
+              var numtrx = parseFloat(columns[3][i]);
+              var sumamt = avt * numtrx;
+              if (!tourists[country]) {
+                tourists[country] = sumamt;
+              } else {
+                tourists[country] += sumamt;
+              }
+
+              var mcc = columns[0][i];
+              if (!mccs[country]) {
+                mccs[country] = [];
+              }
+
+              if (!mccs[country][mcc]) {
+                mccs[country][mcc] = sumamt;
+              } else {
+                mccs[country][mcc] += sumamt;
+              }
+
+              if (!mccDrilldownData[country]) {
+                mccDrilldownData[country] = [];
+              }
+              var brandUnblendingSum = mccs[country][mcc];
+              mccDrilldownData[country][mcc] = brandUnblendingSum;
+            }
+
+          });
+
+          $.each(tourists, function (name, y) {
+            countryData.push({
+              name: name,
+              y: y,
+              drilldown: mccDrilldownData[name] ? name : null
+            });
+          });
+          $.each(mccDrilldownData, function (key, value) {
+            var data = [];
+            for (var mcc in value) {
+              if (value.hasOwnProperty(mcc)) {
+                var sum = value[mcc];
+                data.push([mcc, sum]);
+              }
+            }
+            mccDrilldownSeries.push({
+              name: key,
+              id: key,
+              data: data
+            });
+          });
+
+          // Create the chart
+          $('#touristslu').highcharts({
+            exporting: {
+              enabled: false
+            },
+            chart: {
+              type: 'pie'
+            },
+            title: {
+              text: 'Touristen in Luzern'
+            },
+            subtitle: {
+              text: 'Klicken für Drilldown'
+            },
+            plotOptions: {
+              series: {
+                dataLabels: {
+                  enabled: true,
+                  format: '{point.name}: {point.y:.0f} <br/>({point.percentage:.2f}%)'
+                }
+              }
+            },
+
+            tooltip: {
+              enabled: false,
+              headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+              pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}</b> ({point.percentage:.2f}% of total)<br/>'
+            },
+
+            series: [{
+              name: 'Brands',
+              colorByPoint: true,
+              data: countryData
+            }],
+            drilldown: {
+              series: mccDrilldownSeries
+            }
+          });
+        }
+      });
+    });
+
 
   })
 ;
