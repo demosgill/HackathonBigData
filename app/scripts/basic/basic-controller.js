@@ -1,4 +1,5 @@
 /*global Highcharts:false*/
+/*global accounting:false*/
 /*global $:false*/
 'use strict';
 
@@ -125,6 +126,21 @@ angular.module('basic')
               }]
             },
 
+            tooltip: {
+              backgroundColor: 'none',
+              borderWidth: 0,
+              shadow: false,
+              useHTML: true,
+              padding: 0,
+              formatter: function() {
+                return '<table border="0"><tr><td style="border:0;padding-right:5px;"><span class="f32"><span class="flag ' + this.point.code.toLowerCase() + '"></span></td><td style="border:0;">' +
+                  this.point.name + ':</span><br><span style="font-size:120%;font-weight:800;">' + accounting.formatMoney(this.point.value, 'CHF ') + '</span></td></tr></table>';
+              },
+              positioner: function () {
+                return {x: 0, y: 150};
+              }
+            },
+
             series: [{
               data: data,
               mapData: Highcharts.maps['custom/world'],
@@ -135,9 +151,6 @@ angular.module('basic')
                 hover: {
                   color: '#BADA55'
                 }
-              },
-              tooltip: {
-                valueSuffix: ' CHF'
               }
             }]
           });
@@ -341,20 +354,25 @@ angular.module('basic')
               text: 'Klicken für Drilldown'
             },
             plotOptions: {
-              series: {
+              pie: {
                 dataLabels: {
                   enabled: true,
                   format: '{point.name}: {point.y:.0f} <br/>({point.percentage:.2f}%)'
                 }
-              }
+              },
+              showInLegend: true
             },
-
             tooltip: {
-              enabled: false,
+              enabled: true,
               headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
               pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}</b> ({point.percentage:.2f}% of total)<br/>'
             },
-
+            legend: {
+              layout: 'vertical',
+              align: 'top',
+              verticalAlign: 'top',
+              borderWidth: 0
+            },
             series: [{
               name: 'Brands',
               colorByPoint: true,
