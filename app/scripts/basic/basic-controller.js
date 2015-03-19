@@ -60,7 +60,7 @@ angular.module('basic')
             if (i > 0) {
               data.push({
                 code: code.toUpperCase(),
-                value: parseFloat(columns[3][i]),
+                value: parseFloat(columns[1][i]) * parseFloat(columns[2][i]),
                 name: code.toUpperCase()
               });
             }
@@ -88,7 +88,7 @@ angular.module('basic')
 
             legend: {
               title: {
-                text: 'CHF',
+                text: '',
                 style: {
                   color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
                 }
@@ -108,21 +108,18 @@ angular.module('basic')
                 to: 50
               }, {
                 from: 50,
-                to: 1000
+                to: 100
               }, {
-                from: 1000,
-                to: 5000
+                from: 100,
+                to: 150
               }, {
-                from: 5000,
-                to: 10000
+                from: 150,
+                to: 200
               }, {
-                from: 10000,
-                to: 30000
+                from: 200,
+                to: 500
               }, {
-                from: 30000,
-                to: 100000
-              }, {
-                from: 100000
+                from: 500,
               }]
             },
 
@@ -134,7 +131,7 @@ angular.module('basic')
               padding: 0,
               formatter: function() {
                 return '<table border="0"><tr><td style="border:0;padding-right:5px;"><span class="f32"><span class="flag ' + this.point.code.toLowerCase() + '"></span></td><td style="border:0;">' +
-                  this.point.name + ':</span><br><span style="font-size:120%;font-weight:800;">' + accounting.formatMoney(this.point.value, 'CHF ') + '</span></td></tr></table>';
+                  this.point.name + ':</span><br><span style="font-size:120%;font-weight:800;">' + accounting.formatMoney(this.point.value, '') + '</span></td></tr></table>';
               },
               positioner: function () {
                 return {x: 0, y: 150};
@@ -346,6 +343,119 @@ angular.module('basic')
             },
             chart: {
               type: 'pie'
+            },
+            title: {
+              text: 'Touristen in Luzern'
+            },
+            subtitle: {
+              text: 'Klicken für Drilldown'
+            },
+            plotOptions: {
+              pie: {
+                dataLabels: {
+                  enabled: true,
+                  format: '{point.name}: {point.y:.0f} <br/>({point.percentage:.2f}%)'
+                }
+              },
+              showInLegend: true
+            },
+            tooltip: {
+              enabled: true,
+              headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+              pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}</b> ({point.percentage:.2f}% of total)<br/>'
+            },
+            legend: {
+              layout: 'vertical',
+              align: 'top',
+              verticalAlign: 'top',
+              borderWidth: 0
+            },
+            series: [{
+              name: 'Brands',
+              colorByPoint: true,
+              data: countryData
+            }],
+            drilldown: {
+              series: mccDrilldownSeries
+            }
+          });
+        }
+      });
+
+      Highcharts.data({
+        csv: document.getElementById('touristslububble').innerHTML,
+        itemDelimiter: '\t',
+        parsed: function (columns) {
+
+          var tourists = {},
+            countryData = [],
+            mccDrilldownData = {},
+            mccDrilldownSeries = [],
+            mccs = [];
+
+          // Parse percentage strings
+          $.each(columns[1], function (i, country) {
+            if (i > 0) {
+
+              // Create the main data
+              var avt = parseFloat(columns[2][i]);
+              var numtrx = parseFloat(columns[3][i]);
+              var sumamt = avt * numtrx;
+              if (!tourists[country]) {
+                tourists[country] = sumamt;
+              } else {
+                tourists[country] += sumamt;
+              }
+
+              var mcc = columns[0][i];
+              if (!mccs[country]) {
+                mccs[country] = [];
+              }
+
+              if (!mccs[country][mcc]) {
+                mccs[country][mcc] = sumamt;
+              } else {
+                mccs[country][mcc] += sumamt;
+              }
+
+              if (!mccDrilldownData[country]) {
+                mccDrilldownData[country] = [];
+              }
+              var brandUnblendingSum = mccs[country][mcc];
+              mccDrilldownData[country][mcc] = brandUnblendingSum;
+            }
+
+          });
+
+          $.each(tourists, function (name, y) {
+            countryData.push({
+              name: name,
+              y: y,
+              drilldown: mccDrilldownData[name] ? name : null
+            });
+          });
+          $.each(mccDrilldownData, function (key, value) {
+            var data = [];
+            for (var mcc in value) {
+              if (value.hasOwnProperty(mcc)) {
+                var sum = value[mcc];
+                data.push([mcc, sum]);
+              }
+            }
+            mccDrilldownSeries.push({
+              name: key,
+              id: key,
+              data: data
+            });
+          });
+
+          // Create the chart
+          $('#touristsallcategory').highcharts({
+            exporting: {
+              enabled: false
+            },
+            chart: {
+              type: 'bubble'
             },
             title: {
               text: 'Touristen in Luzern'

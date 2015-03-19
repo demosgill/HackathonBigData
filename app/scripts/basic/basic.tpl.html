@@ -15,7 +15,12 @@
       <div class="col-md-12 chartexample">
         <h3><a href="http://www.highcharts.com/maps/demo" target="_blank">Highmaps</a> Library:</h3>
 
-        <div id="mapcontainer"></div>
+        <div id="mapcontainer" style="min-width: 400px; height: 800px; margin: 0 auto"></div>
+      </div>
+      <div class="col-md-12 chartexample">
+        <h3><a href="http://www.highcharts.com" target="_blank">Highcharts</a> Library:</h3>
+
+        <div id="touristslububble" style="min-width: 400px; height: 800px; margin: 0 auto"></div>
       </div>
       <div class="col-md-12">
         <div class="col-md-12 chartexample">
@@ -47,12 +52,21 @@ Info und Shop	Souvenir Shops	9000
 Restaurant Chalet	Restaurants	1000
 </pre>
 
-<pre id="kicountryall" style="display:none">KICOUNTISO2	NUMBEROFTRX	AVGTRXAMT
-CH	5662	87.79	500000
-US	1879	69.08	120000
-CN	1335	93.14	130000
-DE	807	117.54	85000
-GB	551	150.7	82000
+<pre id="kicountryall" style="display:none">KICOUNTISO2	AVGTRXAMT NUMBEROFTRX
+US	3.69	146
+TH	6.17	20
+RU	3.00	63
+JP	3.30	39
+IT	2.50	44
+HK	5.29	30
+GB	3.33	71
+ES	3.33	42
+DE	3.00	71
+CN	3.69	150
+CA	3.70	47
+AU	2.64	57
+AE	4.30	47
+FR	2.83	47
 </pre>
 
 <pre id="touristsluonly0" style="display:none">
@@ -205,1112 +219,1476 @@ Other	United Arab Emirates	2	1
 FoodStore	United Kingdom	2	1
 </pre>
 
-<pre id="touristsall0" style="display:none">
-Location	Merchant Category	KI Country	avt	numtrx
-Engelberg	Restaurant	United Arab Emirates	3	3
-Engelberg	Shopping	United Arab Emirates	3	3
-Engelberg	Transportation	United Arab Emirates	5	3
-Interlaken	Restaurant	United Arab Emirates	3	1
-Interlaken	Service Stations	United Arab Emirates	1	1
-Interlaken	Shopping	United Arab Emirates	3	1
-Kriens	Hotel	United Arab Emirates	3	3
-Kriens	Restaurant	United Arab Emirates	2	3
-Kriens	Service Stations	United Arab Emirates	3	1
-Kriens	Shopping	United Arab Emirates	3	3
-Kriens	Transportation	United Arab Emirates	3	5
-Luzern	Bakeries	United Arab Emirates	2	5
-Luzern	Clocks, Jewelery	United Arab Emirates	8	5
-Luzern	Electronic Sales	United Arab Emirates	2	2
-Luzern	Hotel	United Arab Emirates	13	5
-Luzern	Other	United Arab Emirates	2	1
-Luzern	Restaurant	United Arab Emirates	3	8
-Luzern	Shopping	United Arab Emirates	5	8
-Luzern	Supermarket	United Arab Emirates	2	5
-Luzern	Tourist Attractions	United Arab Emirates	3	5
-Luzern	Transportation	United Arab Emirates	3	3
-Mendrisio	Shopping	United Arab Emirates	5	3
-Zürich	Other	United Arab Emirates	5	1
-Zürich	Restaurant	United Arab Emirates	3	3
-Zürich	Shopping	United Arab Emirates	21	2
-Zürich	Supermarket	United Arab Emirates	2	3
-Basel	Supermarket	Australia	1	1
-Bern	Supermarket	Australia	2	1
-Engelberg	Hotel	Australia	3	1
-Engelberg	Restaurant	Australia	3	3
-Engelberg	Shopping	Australia	2	3
-Engelberg	Supermarket	Australia	2	1
-Interlaken	Supermarket	Australia	2	2
-Kriens	Hotel	Australia	3	5
-Kriens	Restaurant	Australia	3	2
-Kriens	Shopping	Australia	3	3
-Kriens	Transportation	Australia	3	3
-Lauterbrunnen	Hotel	Australia	2	2
-Luzern	Bakeries	Australia	2	5
-Luzern	Clocks, Jewelery	Australia	5	5
-Luzern	Electronic Sales	Australia	2	2
-Luzern	Hotel	Australia	3	5
-Luzern	Museum, Theater	Australia	2	2
-Luzern	Other	Australia	3	3
-Luzern	Restaurant	Australia	2	8
-Luzern	Shopping	Australia	3	13
-Luzern	Supermarket	Australia	2	8
-Luzern	Tourist Attractions	Australia	2	3
-Luzern	Transportation	Australia	3	3
-Stans	Restaurant	Australia	2	2
-Stans	Shopping	Australia	2	2
-Zürich	Hotel	Australia	5	3
-Zürich	Restaurant	Australia	2	3
-Zürich	Supermarket	Australia	1	3
-Alpnachstad	Transportation	Canada	3	3
-Bern	Transportation	Canada	3	1
-Engelberg	Restaurant	Canada	2	2
-Engelberg	Shopping	Canada	3	1
-Kriens	Hotel	Canada	2	5
-Kriens	Shopping	Canada	3	5
-Kriens	Transportation	Canada	3	3
-Luzern	Bakeries	Canada	2	5
-Luzern	Clocks, Jewelery	Canada	8	5
-Luzern	Electronic Sales	Canada	2	3
-Luzern	Hotel	Canada	8	3
-Luzern	Other	Canada	3	1
-Luzern	Restaurant	Canada	3	8
-Luzern	Shopping	Canada	3	8
-Luzern	Supermarket	Canada	2	8
-Luzern	Tourist Attractions	Canada	3	3
-Luzern	Transportation	Canada	3	3
-Stans	Restaurant	Canada	2	1
-Zürich	Hotel	Canada	3	2
-Zürich	Restaurant	Canada	3	3
-Zürich	Supermarket	Canada	2	2
-Affoltern am Albis	Restaurant	China	3	2
-Affoltern am Albis	Service Stations	China	2	3
-Affoltern am Albis	Supermarket	China	2	3
-Alpnachstad	Restaurant	China	3	3
-Alpnachstad	Shopping	China	3	3
-Alpnachstad	Transportation	China	5	5
-Basel	Service Stations	China	2	2
-Basel	Supermarket	China	2	3
-Bellinzona	Restaurant	China	2	3
-Bellinzona	Service Stations	China	2	5
-Bern	Hotel	China	5	2
-Bern	Restaurant	China	3	3
-Bern	Shopping	China	5	3
-Bern	Supermarket	China	2	3
-Bern	Transportation	China	5	3
-Brunnen	Hotel	China	3	1
-Brunnen	Restaurant	China	3	1
-Engelberg	Clocks, Jewelery	China	3	2
-Engelberg	Hotel	China	5	3
-Engelberg	Restaurant	China	3	13
-Engelberg	Shopping	China	13	8
-Engelberg	Supermarket	China	3	3
-Engelberg	Transportation	China	5	3
-Genève	Hotel	China	5	3
-Genève	Other	China	5	2
-Genève	Restaurant	China	3	1
-Genève	Shopping	China	3	2
-Glattbrugg	Hotel	China	5	3
-Goldau	Bakeries	China	2	3
-Grindelwald	Hotel	China	5	3
-Grindelwald	Restaurant	China	2	2
-Grindelwald	Shopping	China	3	3
-Hergiswil NW	Hotel	China	5	2
-Interlaken	Bakeries	China	2	3
-Interlaken	Clocks, Jewelery	China	21	21
-Interlaken	Hotel	China	5	5
-Interlaken	Other	China	5	5
-Interlaken	Restaurant	China	3	8
-Interlaken	Service Stations	China	2	8
-Interlaken	Shopping	China	5	13
-Interlaken	Supermarket	China	2	13
-Interlaken	Transportation	China	3	2
-Jungfraujoch	Shopping	China	3	5
-Kriens	Hotel	China	3	8
-Kriens	Restaurant	China	3	3
-Kriens	Shopping	China	3	8
-Kriens	Transportation	China	3	5
-Lauterbrunnen	Hotel	China	5	2
-Lugano	Clocks, Jewelery	China	13	1
-Lugano	Supermarket	China	3	2
-Luzern	Bakeries	China	2	21
-Luzern	Clocks, Jewelery	China	13	21
-Luzern	Electronic Sales	China	1	5
-Luzern	FoodStore	China	2	5
-Luzern	Hotel	China	5	13
-Luzern	Museum, Theater	China	2	3
-Luzern	Other	China	5	8
-Luzern	Restaurant	China	3	21
-Luzern	Service Stations	China	2	1
-Luzern	Shopping	China	5	21
-Luzern	Supermarket	China	2	21
-Luzern	Tourist Attractions	China	3	5
-Luzern	Transportation	China	3	5
-Mendrisio	Shopping	China	5	5
-Monte Carasso	Restaurant	China	2	8
-Monte Carasso	Service Stations	China	2	8
-Mürren	Hotel	China	5	2
-Mürren	Restaurant	China	3	3
-Mürren	Supermarket	China	2	1
-Mürren	Transportation	China	5	2
-Pratteln	Restaurant	China	3	8
-Pratteln	Service Stations	China	2	3
-Rigi Kulm	Hotel	China	2	3
-Stans	Restaurant	China	2	3
-Stans	Shopping	China	2	2
-Vitznau	Hotel	China	5	3
-Vitznau	Transportation	China	3	3
-Weggis	Hotel	China	5	3
-Weggis	Restaurant	China	3	2
-Weggis	Transportation	China	2	2
-Wengen	Hotel	China	5	2
-Wengen	Shopping	China	5	2
-Wengen	Transportation	China	5	1
-Winterthur	Service Stations	China	3	2
-Zug	Clocks, Jewelery	China	21	3
-Zug	Restaurant	China	3	3
-Zug	Service Stations	China	2	2
-Zug	Shopping	China	3	3
-Zug	Supermarket	China	2	3
-Zürich	Bakeries	China	3	2
-Zürich	Clocks, Jewelery	China	13	3
-Zürich	FoodStore	China	2	3
-Zürich	Hotel	China	5	5
-Zürich	Other	China	5	5
-Zürich	Restaurant	China	5	5
-Zürich	Shopping	China	5	5
-Zürich	Supermarket	China	2	5
-Zürich Flughafen	Restaurant	China	3	1
-Affoltern am Albis	Service Stations	Germany	3	2
-Alpnachstad	Transportation	Germany	3	3
-Basel	Other	Germany	3	2
-Basel	Service Stations	Germany	3	2
-Bern	Restaurant	Germany	2	2
-Bern	Transportation	Germany	2	2
-Engelberg	Restaurant	Germany	3	2
-Engelberg	Transportation	Germany	5	1
-Interlaken	Supermarket	Germany	2	2
-Kriens	Hotel	Germany	3	5
-Kriens	Restaurant	Germany	3	2
-Kriens	Service Stations	Germany	3	2
-Kriens	Shopping	Germany	3	5
-Kriens	Supermarket	Germany	3	3
-Kriens	Transportation	Germany	3	5
-Luzern	Bakeries	Germany	2	5
-Luzern	Clocks, Jewelery	Germany	5	3
-Luzern	Electronic Sales	Germany	1	8
-Luzern	Hotel	Germany	5	8
-Luzern	Museum, Theater	Germany	3	3
-Luzern	Other	Germany	3	3
-Luzern	Restaurant	Germany	3	13
-Luzern	Service Stations	Germany	3	2
-Luzern	Shopping	Germany	3	8
-Luzern	Supermarket	Germany	2	8
-Luzern	Tourist Attractions	Germany	3	5
-Luzern	Transportation	Germany	3	5
-Vitznau	Transportation	Germany	5	2
-Zürich	Electronic Sales	Germany	2	2
-Zürich	Hotel	Germany	3	1
-Zürich	Other	Germany	2	2
-Zürich	Restaurant	Germany	3	3
-Zürich	Supermarket	Germany	2	3
-Affoltern am Albis	Service Stations	Espania	3	1
-Alpnachstad	Restaurant	Espania	3	2
-Alpnachstad	Transportation	Espania	3	2
-Bern	Hotel	Espania	5	2
-Bern	Restaurant	Espania	3	3
-Bern	Supermarket	Espania	2	3
-Interlaken	Electronic Sales	Espania	1	1
-Interlaken	Hotel	Espania	5	1
-Interlaken	Service Stations	Espania	2	2
-Interlaken	Supermarket	Espania	2	2
-Kriens	Hotel	Espania	3	5
-Kriens	Service Stations	Espania	3	2
-Kriens	Shopping	Espania	3	3
-Kriens	Transportation	Espania	3	5
-Luzern	Bakeries	Espania	2	3
-Luzern	Clocks, Jewelery	Espania	8	3
-Luzern	Electronic Sales	Espania	1	5
-Luzern	Hotel	Espania	5	3
-Luzern	Restaurant	Espania	3	8
-Luzern	Shopping	Espania	3	5
-Luzern	Supermarket	Espania	2	8
-Luzern	Tourist Attractions	Espania	3	5
-Luzern	Transportation	Espania	3	2
-Zürich	Hotel	Espania	3	2
-Zürich	Restaurant	Espania	3	3
-Zürich	Supermarket	Espania	2	3
-Alpnachstad	Transportation	France	3	2
-Engelberg	Restaurant	France	3	2
-Engelberg	Transportation	France	5	2
-Genève	Hotel	France	5	1
-Kriens	Hotel	France	3	5
-Kriens	Restaurant	France	2	2
-Kriens	Shopping	France	3	3
-Kriens	Transportation	France	3	5
-Luzern	Bakeries	France	2	3
-Luzern	Clocks, Jewelery	France	3	2
-Luzern	Electronic Sales	France	2	5
-Luzern	FoodStore	France	2	1
-Luzern	Hotel	France	5	5
-Luzern	Museum, Theater	France	3	3
-Luzern	Other	France	3	2
-Luzern	Restaurant	France	3	8
-Luzern	Shopping	France	3	5
-Luzern	Supermarket	France	2	5
-Luzern	Tourist Attractions	France	3	5
-Luzern	Transportation	France	3	3
-Pratteln	Restaurant	France	2	3
-Zürich	Restaurant	France	3	2
-Zürich	Supermarket	France	2	1
-Alpnachstad	Restaurant	United Kingdom	2	2
-Alpnachstad	Shopping	United Kingdom	2	2
-Alpnachstad	Transportation	United Kingdom	5	3
-Basel	Other	United Kingdom	2	2
-Basel	Supermarket	United Kingdom	2	2
-Bellinzona	Service Stations	United Kingdom	3	2
-Bern	Restaurant	United Kingdom	3	2
-Bern	Supermarket	United Kingdom	1	3
-Bern	Transportation	United Kingdom	3	2
-Engelberg	Restaurant	United Kingdom	2	3
-Engelberg	Shopping	United Kingdom	3	3
-Engelberg	Supermarket	United Kingdom	3	2
-Engelberg	Transportation	United Kingdom	5	3
-Hergiswil NW	Shopping	United Kingdom	5	2
-Interlaken	Supermarket	United Kingdom	2	2
-Kriens	Hotel	United Kingdom	3	5
-Kriens	Restaurant	United Kingdom	3	3
-Kriens	Service Stations	United Kingdom	2	3
-Kriens	Shopping	United Kingdom	3	5
-Kriens	Transportation	United Kingdom	3	8
-Luzern	Bakeries	United Kingdom	2	8
-Luzern	Clocks, Jewelery	United Kingdom	8	5
-Luzern	Electronic Sales	United Kingdom	2	5
-Luzern	FoodStore	United Kingdom	2	1
-Luzern	Hotel	United Kingdom	5	8
-Luzern	Other	United Kingdom	5	3
-Luzern	Restaurant	United Kingdom	3	13
-Luzern	Service Stations	United Kingdom	3	2
-Luzern	Shopping	United Kingdom	3	8
-Luzern	Supermarket	United Kingdom	2	8
-Luzern	Tourist Attractions	United Kingdom	2	5
-Luzern	Transportation	United Kingdom	3	5
-Zürich	Hotel	United Kingdom	5	2
-Zürich	Other	United Kingdom	5	2
-Zürich	Restaurant	United Kingdom	3	5
-Zürich	Shopping	United Kingdom	2	1
-Zürich	Supermarket	United Kingdom	2	3
-Zürich Flughafen	Restaurant	United Kingdom	2	3
-Alpnachstad	Transportation	Hong Kong	5	2
-Engelberg	Restaurant	Hong Kong	3	2
-Engelberg	Shopping	Hong Kong	5	1
-Engelberg	Transportation	Hong Kong	5	1
-Interlaken	Shopping	Hong Kong	2	1
-Kriens	Hotel	Hong Kong	3	2
-Luzern	Bakeries	Hong Kong	2	3
-Luzern	Clocks, Jewelery	Hong Kong	21	8
-Luzern	Hotel	Hong Kong	3	2
-Luzern	Restaurant	Hong Kong	3	5
-Luzern	Shopping	Hong Kong	3	5
-Luzern	Supermarket	Hong Kong	2	5
-Luzern	Tourist Attractions	Hong Kong	3	2
-Zürich	Restaurant	Hong Kong	3	1
-Zürich	Shopping	Hong Kong	5	2
-Zürich	Supermarket	Hong Kong	2	2
-Basel	Other	Italia	5	2
-Kriens	Hotel	Italia	3	5
-Kriens	Shopping	Italia	3	3
-Kriens	Transportation	Italia	3	3
-Luzern	Bakeries	Italia	2	5
-Luzern	Electronic Sales	Italia	2	5
-Luzern	Hotel	Italia	5	5
-Luzern	Museum, Theater	Italia	2	2
-Luzern	Other	Italia	3	2
-Luzern	Restaurant	Italia	2	8
-Luzern	Shopping	Italia	2	5
-Luzern	Supermarket	Italia	2	5
-Luzern	Tourist Attractions	Italia	2	5
-Luzern	Transportation	Italia	3	2
-Monte Carasso	Service Stations	Italia	3	2
-Zürich	Restaurant	Italia	3	3
-Zürich	Shopping	Italia	3	2
-Alpnachstad	Restaurant	Japan	2	1
-Alpnachstad	Transportation	Japan	3	3
-Bern	Supermarket	Japan	2	1
-Engelberg	Transportation	Japan	3	2
-Grindelwald	Hotel	Japan	5	2
-Grindelwald	Supermarket	Japan	2	2
-Grindelwald	Transportation	Japan	2	2
-Interlaken	Supermarket	Japan	2	3
-Kriens	Hotel	Japan	3	3
-Kriens	Shopping	Japan	2	3
-Kriens	Transportation	Japan	3	3
-Luzern	Bakeries	Japan	2	5
-Luzern	Clocks, Jewelery	Japan	8	3
-Luzern	Electronic Sales	Japan	2	2
-Luzern	Hotel	Japan	5	3
-Luzern	Museum, Theater	Japan	3	2
-Luzern	Restaurant	Japan	3	5
-Luzern	Shopping	Japan	2	5
-Luzern	Supermarket	Japan	2	8
-Luzern	Tourist Attractions	Japan	3	3
-Luzern	Transportation	Japan	3	3
-Vitznau	Transportation	Japan	3	1
-Zermatt	Hotel	Japan	5	1
-Zermatt	Supermarket	Japan	2	2
-Zürich	FoodStore	Japan	2	2
-Zürich	Hotel	Japan	5	2
-Zürich	Other	Japan	2	2
-Zürich	Restaurant	Japan	3	3
-Zürich	Supermarket	Japan	3	3
-Alpnachstad	Restaurant	Russia	2	3
-Alpnachstad	Transportation	Russia	3	2
-Bern	Restaurant	Russia	2	2
-Bern	Shopping	Russia	3	2
-Bern	Supermarket	Russia	2	2
-Bern	Transportation	Russia	2	1
-Interlaken	Bakeries	Russia	2	1
-Interlaken	Clocks, Jewelery	Russia	3	2
-Interlaken	Shopping	Russia	5	3
-Kriens	Hotel	Russia	3	5
-Kriens	Restaurant	Russia	2	3
-Kriens	Service Stations	Russia	3	1
-Kriens	Shopping	Russia	3	3
-Kriens	Transportation	Russia	3	5
-Luzern	Bakeries	Russia	2	8
-Luzern	Clocks, Jewelery	Russia	8	5
-Luzern	Electronic Sales	Russia	2	3
-Luzern	Hotel	Russia	5	5
-Luzern	Museum, Theater	Russia	2	2
-Luzern	Other	Russia	3	3
-Luzern	Restaurant	Russia	2	8
-Luzern	Shopping	Russia	3	13
-Luzern	Supermarket	Russia	2	8
-Luzern	Tourist Attractions	Russia	2	5
-Luzern	Transportation	Russia	2	3
-Zürich	FoodStore	Russia	2	2
-Zürich	Hotel	Russia	5	2
-Zürich	Other	Russia	2	2
-Zürich	Restaurant	Russia	3	3
-Zürich	Shopping	Russia	5	5
-Zürich	Supermarket	Russia	2	3
-Interlaken	Clocks, Jewelery	Thailand	8	2
-Luzern	Bakeries	Thailand	3	2
-Luzern	Clocks, Jewelery	Thailand	13	5
-Luzern	Hotel	Thailand	8	3
-Luzern	Restaurant	Thailand	5	3
-Luzern	Shopping	Thailand	5	5
-Luzern	Supermarket	Thailand	3	2
-Zürich	Shopping	Thailand	13	1
-Affoltern am Albis	Service Stations	United States	2	2
-Alpnachstad	Restaurant	United States	2	5
-Alpnachstad	Shopping	United States	2	3
-Alpnachstad	Transportation	United States	5	8
-Basel	Restaurant	United States	3	3
-Basel	Supermarket	United States	2	3
-Bellinzona	Restaurant	United States	2	2
-Bellinzona	Service Stations	United States	2	5
-Bern	Hotel	United States	5	2
-Bern	Other	United States	2	2
-Bern	Restaurant	United States	3	3
-Bern	Supermarket	United States	1	2
-Bern	Transportation	United States	3	5
-Brunnen	Shopping	United States	5	1
-Engelberg	Hotel	United States	3	3
-Engelberg	Other	United States	2	5
-Engelberg	Restaurant	United States	2	8
-Engelberg	Shopping	United States	3	5
-Engelberg	Supermarket	United States	2	3
-Engelberg	Transportation	United States	3	5
-Genève	Restaurant	United States	2	2
-Glattbrugg	Hotel	United States	5	3
-Goldau	Bakeries	United States	2	3
-Grindelwald	Shopping	United States	3	2
-Grindelwald	Supermarket	United States	3	2
-Interlaken	Clocks, Jewelery	United States	3	2
-Interlaken	Hotel	United States	5	3
-Interlaken	Restaurant	United States	3	3
-Interlaken	Service Stations	United States	2	3
-Interlaken	Shopping	United States	5	2
-Interlaken	Supermarket	United States	2	5
-Interlaken	Transportation	United States	2	2
-Kriens	Hotel	United States	2	13
-Kriens	Restaurant	United States	2	5
-Kriens	Service Stations	United States	3	3
-Kriens	Shopping	United States	3	13
-Kriens	Supermarket	United States	2	1
-Kriens	Transportation	United States	3	13
-Lugano	Hotel	United States	2	1
-Lugano	Restaurant	United States	3	1
-Luzern	Bakeries	United States	2	21
-Luzern	Clocks, Jewelery	United States	13	13
-Luzern	Electronic Sales	United States	2	5
-Luzern	FoodStore	United States	2	5
-Luzern	Hotel	United States	5	13
-Luzern	Museum, Theater	United States	3	3
-Luzern	Other	United States	5	5
-Luzern	Restaurant	United States	2	21
-Luzern	Service Stations	United States	3	2
-Luzern	Shopping	United States	3	21
-Luzern	Supermarket	United States	2	21
-Luzern	Tourist Attractions	United States	3	8
-Luzern	Transportation	United States	3	8
-Monte Carasso	Restaurant	United States	3	2
-Monte Carasso	Service Stations	United States	2	2
-Mürren	Hotel	United States	5	2
-Mürren	Restaurant	United States	3	3
-Mürren	Transportation	United States	3	2
-Pratteln	Restaurant	United States	2	3
-Rigi Kaltbad	Hotel	United States	5	1
-Rigi Kulm	Hotel	United States	2	3
-Stans	Restaurant	United States	2	5
-Stans	Shopping	United States	3	3
-Stans	Transportation	United States	3	3
-Weggis	Hotel	United States	2	3
-Weggis	Restaurant	United States	3	1
-Weggis	Transportation	United States	3	2
-Wengen	Hotel	United States	5	3
-Wengen	Supermarket	United States	2	2
-Zürich	Bakeries	United States	2	3
-Zürich	Bar	United States	3	2
-Zürich	Electronic Sales	United States	2	1
-Zürich	FoodStore	United States	2	3
-Zürich	Hotel	United States	5	8
-Zürich	Other	United States	3	3
-Zürich	Restaurant	United States	3	8
-Zürich	Shopping	United States	3	5
-Zürich	Supermarket	United States	2	5
-Zürich	Transportation	United States	3	2
-Zürich	Travel Agency	United States	5	3
-Zürich Flughafen	Bar	United States	2	2
-Zürich Flughafen	Restaurant	United States	2	5
-</pre>
-
-<pre id="touristsluonly0" style="display:none">
-Merchant Category	KI Country	avt	numtrx
-Clocks, Jewelery	China	13	21
-Clocks, Jewelery	United States	13	13
-Clocks, Jewelery	Hong Kong	21	8
-Shopping	China	5	21
-Hotel	China	5	13
-Clocks, Jewelery	Thailand	13	5
-Hotel	United Arab Emirates	13	5
-Hotel	United States	5	13
-Restaurant	China	3	21
-Shopping	United States	3	21
-Bakeries	China	2	21
-Supermarket	China	2	21
-Bakeries	United States	2	21
-Restaurant	United States	2	21
-Supermarket	United States	2	21
-Clocks, Jewelery	Canada	8	5
-Other	China	5	8
-Hotel	Germany	5	8
-Clocks, Jewelery	Russia	8	5
-Clocks, Jewelery	United Arab Emirates	8	5
-Shopping	United Arab Emirates	5	8
-Clocks, Jewelery	United Kingdom	8	5
-Hotel	United Kingdom	5	8
-Shopping	Australia	3	13
-Restaurant	Germany	3	13
-Shopping	Russia	3	13
-Restaurant	United Kingdom	3	13
-Clocks, Jewelery	Australia	5	5
-Hotel	France	5	5
-Hotel	Italia	5	5
-Hotel	Russia	5	5
-Shopping	Thailand	5	5
-Other	United States	5	5
-Hotel	Canada	8	3
-Restaurant	Canada	3	8
-Shopping	Canada	3	8
-Clocks, Jewelery	Espania	8	3
-Restaurant	Espania	3	8
-Restaurant	France	3	8
-Shopping	Germany	3	8
-Clocks, Jewelery	Japan	8	3
-Hotel	Thailand	8	3
-Restaurant	United Arab Emirates	3	8
-Shopping	United Kingdom	3	8
-Tourist Attractions	United States	3	8
-Transportation	United States	3	8
-Restaurant	Australia	2	8
-Supermarket	Australia	2	8
-Supermarket	Canada	2	8
-Supermarket	Espania	2	8
-Supermarket	Germany	2	8
-Restaurant	Italia	2	8
-Supermarket	Japan	2	8
-Bakeries	Russia	2	8
-Restaurant	Russia	2	8
-Supermarket	Russia	2	8
-Bakeries	United Kingdom	2	8
-Supermarket	United Kingdom	2	8
-Hotel	Australia	3	5
-Tourist Attractions	China	3	5
-Transportation	China	3	5
-Hotel	Espania	5	3
-Shopping	Espania	3	5
-Tourist Attractions	Espania	3	5
-Shopping	France	3	5
-Tourist Attractions	France	3	5
-Clocks, Jewelery	Germany	5	3
-Tourist Attractions	Germany	3	5
-Transportation	Germany	3	5
-Restaurant	Hong Kong	3	5
-Shopping	Hong Kong	3	5
-Hotel	Japan	5	3
-Restaurant	Japan	3	5
-Restaurant	Thailand	5	3
-Tourist Attractions	United Arab Emirates	3	5
-Other	United Kingdom	5	3
-Transportation	United Kingdom	3	5
-Bakeries	Australia	2	5
-Bakeries	Canada	2	5
-FoodStore	China	2	5
-Electronic Sales	France	2	5
-Supermarket	France	2	5
-Bakeries	Germany	2	5
-Supermarket	Hong Kong	2	5
-Bakeries	Italia	2	5
-Electronic Sales	Italia	2	5
-Shopping	Italia	2	5
-Supermarket	Italia	2	5
-Tourist Attractions	Italia	2	5
-Bakeries	Japan	2	5
-Shopping	Japan	2	5
-Tourist Attractions	Russia	2	5
-Bakeries	United Arab Emirates	2	5
-Supermarket	United Arab Emirates	2	5
-Electronic Sales	United Kingdom	2	5
-Tourist Attractions	United Kingdom	2	5
-Electronic Sales	United States	2	5
-FoodStore	United States	2	5
-Other	Australia	3	3
-Transportation	Australia	3	3
-Tourist Attractions	Canada	3	3
-Transportation	Canada	3	3
-Museum, Theater	France	3	3
-Transportation	France	3	3
-Museum, Theater	Germany	3	3
-Other	Germany	3	3
-Tourist Attractions	Japan	3	3
-Transportation	Japan	3	3
-Other	Russia	3	3
-Transportation	United Arab Emirates	3	3
-Museum, Theater	United States	3	3
-Electronic Sales	Germany	1	8
-Tourist Attractions	Australia	2	3
-Electronic Sales	Canada	2	3
-Museum, Theater	China	2	3
-Bakeries	Espania	2	3
-Transportation	Espania	3	2
-Bakeries	France	2	3
-Clocks, Jewelery	France	3	2
-Other	France	3	2
-Service Stations	Germany	3	2
-Bakeries	Hong Kong	2	3
-Hotel	Hong Kong	3	2
-Tourist Attractions	Hong Kong	3	2
-Other	Italia	3	2
-Transportation	Italia	3	2
-Museum, Theater	Japan	3	2
-Electronic Sales	Russia	2	3
-Transportation	Russia	2	3
-Bakeries	Thailand	3	2
-Supermarket	Thailand	3	2
-Service Stations	United Kingdom	3	2
-Service Stations	United States	3	2
-Electronic Sales	China	1	5
-Electronic Sales	Espania	1	5
-Electronic Sales	Australia	2	2
-Museum, Theater	Australia	2	2
-Museum, Theater	Italia	2	2
-Electronic Sales	Japan	2	2
-Museum, Theater	Russia	2	2
-Electronic Sales	United Arab Emirates	2	2
-Other	Canada	3	1
-Service Stations	China	2	1
-FoodStore	France	2	1
-Other	United Arab Emirates	2	1
-FoodStore	United Kingdom	2	1
-</pre>
-
-<pre id="touristsall0" style="display:none">
-Location	Merchant Category	KI Country	avt	numtrx
-Engelberg	Restaurant	United Arab Emirates	3	3
-Engelberg	Shopping	United Arab Emirates	3	3
-Engelberg	Transportation	United Arab Emirates	5	3
-Interlaken	Restaurant	United Arab Emirates	3	1
-Interlaken	Service Stations	United Arab Emirates	1	1
-Interlaken	Shopping	United Arab Emirates	3	1
-Kriens	Hotel	United Arab Emirates	3	3
-Kriens	Restaurant	United Arab Emirates	2	3
-Kriens	Service Stations	United Arab Emirates	3	1
-Kriens	Shopping	United Arab Emirates	3	3
-Kriens	Transportation	United Arab Emirates	3	5
-Luzern	Bakeries	United Arab Emirates	2	5
-Luzern	Clocks, Jewelery	United Arab Emirates	8	5
-Luzern	Electronic Sales	United Arab Emirates	2	2
-Luzern	Hotel	United Arab Emirates	13	5
-Luzern	Other	United Arab Emirates	2	1
-Luzern	Restaurant	United Arab Emirates	3	8
-Luzern	Shopping	United Arab Emirates	5	8
-Luzern	Supermarket	United Arab Emirates	2	5
-Luzern	Tourist Attractions	United Arab Emirates	3	5
-Luzern	Transportation	United Arab Emirates	3	3
-Mendrisio	Shopping	United Arab Emirates	5	3
-Zürich	Other	United Arab Emirates	5	1
-Zürich	Restaurant	United Arab Emirates	3	3
-Zürich	Shopping	United Arab Emirates	21	2
-Zürich	Supermarket	United Arab Emirates	2	3
-Basel	Supermarket	Australia	1	1
-Bern	Supermarket	Australia	2	1
-Engelberg	Hotel	Australia	3	1
-Engelberg	Restaurant	Australia	3	3
-Engelberg	Shopping	Australia	2	3
-Engelberg	Supermarket	Australia	2	1
-Interlaken	Supermarket	Australia	2	2
-Kriens	Hotel	Australia	3	5
-Kriens	Restaurant	Australia	3	2
-Kriens	Shopping	Australia	3	3
-Kriens	Transportation	Australia	3	3
-Lauterbrunnen	Hotel	Australia	2	2
-Luzern	Bakeries	Australia	2	5
-Luzern	Clocks, Jewelery	Australia	5	5
-Luzern	Electronic Sales	Australia	2	2
-Luzern	Hotel	Australia	3	5
-Luzern	Museum, Theater	Australia	2	2
-Luzern	Other	Australia	3	3
-Luzern	Restaurant	Australia	2	8
-Luzern	Shopping	Australia	3	13
-Luzern	Supermarket	Australia	2	8
-Luzern	Tourist Attractions	Australia	2	3
-Luzern	Transportation	Australia	3	3
-Stans	Restaurant	Australia	2	2
-Stans	Shopping	Australia	2	2
-Zürich	Hotel	Australia	5	3
-Zürich	Restaurant	Australia	2	3
-Zürich	Supermarket	Australia	1	3
-Alpnachstad	Transportation	Canada	3	3
-Bern	Transportation	Canada	3	1
-Engelberg	Restaurant	Canada	2	2
-Engelberg	Shopping	Canada	3	1
-Kriens	Hotel	Canada	2	5
-Kriens	Shopping	Canada	3	5
-Kriens	Transportation	Canada	3	3
-Luzern	Bakeries	Canada	2	5
-Luzern	Clocks, Jewelery	Canada	8	5
-Luzern	Electronic Sales	Canada	2	3
-Luzern	Hotel	Canada	8	3
-Luzern	Other	Canada	3	1
-Luzern	Restaurant	Canada	3	8
-Luzern	Shopping	Canada	3	8
-Luzern	Supermarket	Canada	2	8
-Luzern	Tourist Attractions	Canada	3	3
-Luzern	Transportation	Canada	3	3
-Stans	Restaurant	Canada	2	1
-Zürich	Hotel	Canada	3	2
-Zürich	Restaurant	Canada	3	3
-Zürich	Supermarket	Canada	2	2
-Affoltern am Albis	Restaurant	China	3	2
-Affoltern am Albis	Service Stations	China	2	3
-Affoltern am Albis	Supermarket	China	2	3
-Alpnachstad	Restaurant	China	3	3
-Alpnachstad	Shopping	China	3	3
-Alpnachstad	Transportation	China	5	5
-Basel	Service Stations	China	2	2
-Basel	Supermarket	China	2	3
-Bellinzona	Restaurant	China	2	3
-Bellinzona	Service Stations	China	2	5
-Bern	Hotel	China	5	2
-Bern	Restaurant	China	3	3
-Bern	Shopping	China	5	3
-Bern	Supermarket	China	2	3
-Bern	Transportation	China	5	3
-Brunnen	Hotel	China	3	1
-Brunnen	Restaurant	China	3	1
-Engelberg	Clocks, Jewelery	China	3	2
-Engelberg	Hotel	China	5	3
-Engelberg	Restaurant	China	3	13
-Engelberg	Shopping	China	13	8
-Engelberg	Supermarket	China	3	3
-Engelberg	Transportation	China	5	3
-Genève	Hotel	China	5	3
-Genève	Other	China	5	2
-Genève	Restaurant	China	3	1
-Genève	Shopping	China	3	2
-Glattbrugg	Hotel	China	5	3
-Goldau	Bakeries	China	2	3
-Grindelwald	Hotel	China	5	3
-Grindelwald	Restaurant	China	2	2
-Grindelwald	Shopping	China	3	3
-Hergiswil NW	Hotel	China	5	2
-Interlaken	Bakeries	China	2	3
-Interlaken	Clocks, Jewelery	China	21	21
-Interlaken	Hotel	China	5	5
-Interlaken	Other	China	5	5
-Interlaken	Restaurant	China	3	8
-Interlaken	Service Stations	China	2	8
-Interlaken	Shopping	China	5	13
-Interlaken	Supermarket	China	2	13
-Interlaken	Transportation	China	3	2
-Jungfraujoch	Shopping	China	3	5
-Kriens	Hotel	China	3	8
-Kriens	Restaurant	China	3	3
-Kriens	Shopping	China	3	8
-Kriens	Transportation	China	3	5
-Lauterbrunnen	Hotel	China	5	2
-Lugano	Clocks, Jewelery	China	13	1
-Lugano	Supermarket	China	3	2
-Luzern	Bakeries	China	2	21
-Luzern	Clocks, Jewelery	China	13	21
-Luzern	Electronic Sales	China	1	5
-Luzern	FoodStore	China	2	5
-Luzern	Hotel	China	5	13
-Luzern	Museum, Theater	China	2	3
-Luzern	Other	China	5	8
-Luzern	Restaurant	China	3	21
-Luzern	Service Stations	China	2	1
-Luzern	Shopping	China	5	21
-Luzern	Supermarket	China	2	21
-Luzern	Tourist Attractions	China	3	5
-Luzern	Transportation	China	3	5
-Mendrisio	Shopping	China	5	5
-Monte Carasso	Restaurant	China	2	8
-Monte Carasso	Service Stations	China	2	8
-Mürren	Hotel	China	5	2
-Mürren	Restaurant	China	3	3
-Mürren	Supermarket	China	2	1
-Mürren	Transportation	China	5	2
-Pratteln	Restaurant	China	3	8
-Pratteln	Service Stations	China	2	3
-Rigi Kulm	Hotel	China	2	3
-Stans	Restaurant	China	2	3
-Stans	Shopping	China	2	2
-Vitznau	Hotel	China	5	3
-Vitznau	Transportation	China	3	3
-Weggis	Hotel	China	5	3
-Weggis	Restaurant	China	3	2
-Weggis	Transportation	China	2	2
-Wengen	Hotel	China	5	2
-Wengen	Shopping	China	5	2
-Wengen	Transportation	China	5	1
-Winterthur	Service Stations	China	3	2
-Zug	Clocks, Jewelery	China	21	3
-Zug	Restaurant	China	3	3
-Zug	Service Stations	China	2	2
-Zug	Shopping	China	3	3
-Zug	Supermarket	China	2	3
-Zürich	Bakeries	China	3	2
-Zürich	Clocks, Jewelery	China	13	3
-Zürich	FoodStore	China	2	3
-Zürich	Hotel	China	5	5
-Zürich	Other	China	5	5
-Zürich	Restaurant	China	5	5
-Zürich	Shopping	China	5	5
-Zürich	Supermarket	China	2	5
-Zürich Flughafen	Restaurant	China	3	1
-Affoltern am Albis	Service Stations	Germany	3	2
-Alpnachstad	Transportation	Germany	3	3
-Basel	Other	Germany	3	2
-Basel	Service Stations	Germany	3	2
-Bern	Restaurant	Germany	2	2
-Bern	Transportation	Germany	2	2
-Engelberg	Restaurant	Germany	3	2
-Engelberg	Transportation	Germany	5	1
-Interlaken	Supermarket	Germany	2	2
-Kriens	Hotel	Germany	3	5
-Kriens	Restaurant	Germany	3	2
-Kriens	Service Stations	Germany	3	2
-Kriens	Shopping	Germany	3	5
-Kriens	Supermarket	Germany	3	3
-Kriens	Transportation	Germany	3	5
-Luzern	Bakeries	Germany	2	5
-Luzern	Clocks, Jewelery	Germany	5	3
-Luzern	Electronic Sales	Germany	1	8
-Luzern	Hotel	Germany	5	8
-Luzern	Museum, Theater	Germany	3	3
-Luzern	Other	Germany	3	3
-Luzern	Restaurant	Germany	3	13
-Luzern	Service Stations	Germany	3	2
-Luzern	Shopping	Germany	3	8
-Luzern	Supermarket	Germany	2	8
-Luzern	Tourist Attractions	Germany	3	5
-Luzern	Transportation	Germany	3	5
-Vitznau	Transportation	Germany	5	2
-Zürich	Electronic Sales	Germany	2	2
-Zürich	Hotel	Germany	3	1
-Zürich	Other	Germany	2	2
-Zürich	Restaurant	Germany	3	3
-Zürich	Supermarket	Germany	2	3
-Affoltern am Albis	Service Stations	Espania	3	1
-Alpnachstad	Restaurant	Espania	3	2
-Alpnachstad	Transportation	Espania	3	2
-Bern	Hotel	Espania	5	2
-Bern	Restaurant	Espania	3	3
-Bern	Supermarket	Espania	2	3
-Interlaken	Electronic Sales	Espania	1	1
-Interlaken	Hotel	Espania	5	1
-Interlaken	Service Stations	Espania	2	2
-Interlaken	Supermarket	Espania	2	2
-Kriens	Hotel	Espania	3	5
-Kriens	Service Stations	Espania	3	2
-Kriens	Shopping	Espania	3	3
-Kriens	Transportation	Espania	3	5
-Luzern	Bakeries	Espania	2	3
-Luzern	Clocks, Jewelery	Espania	8	3
-Luzern	Electronic Sales	Espania	1	5
-Luzern	Hotel	Espania	5	3
-Luzern	Restaurant	Espania	3	8
-Luzern	Shopping	Espania	3	5
-Luzern	Supermarket	Espania	2	8
-Luzern	Tourist Attractions	Espania	3	5
-Luzern	Transportation	Espania	3	2
-Zürich	Hotel	Espania	3	2
-Zürich	Restaurant	Espania	3	3
-Zürich	Supermarket	Espania	2	3
-Alpnachstad	Transportation	France	3	2
-Engelberg	Restaurant	France	3	2
-Engelberg	Transportation	France	5	2
-Genève	Hotel	France	5	1
-Kriens	Hotel	France	3	5
-Kriens	Restaurant	France	2	2
-Kriens	Shopping	France	3	3
-Kriens	Transportation	France	3	5
-Luzern	Bakeries	France	2	3
-Luzern	Clocks, Jewelery	France	3	2
-Luzern	Electronic Sales	France	2	5
-Luzern	FoodStore	France	2	1
-Luzern	Hotel	France	5	5
-Luzern	Museum, Theater	France	3	3
-Luzern	Other	France	3	2
-Luzern	Restaurant	France	3	8
-Luzern	Shopping	France	3	5
-Luzern	Supermarket	France	2	5
-Luzern	Tourist Attractions	France	3	5
-Luzern	Transportation	France	3	3
-Pratteln	Restaurant	France	2	3
-Zürich	Restaurant	France	3	2
-Zürich	Supermarket	France	2	1
-Alpnachstad	Restaurant	United Kingdom	2	2
-Alpnachstad	Shopping	United Kingdom	2	2
-Alpnachstad	Transportation	United Kingdom	5	3
-Basel	Other	United Kingdom	2	2
-Basel	Supermarket	United Kingdom	2	2
-Bellinzona	Service Stations	United Kingdom	3	2
-Bern	Restaurant	United Kingdom	3	2
-Bern	Supermarket	United Kingdom	1	3
-Bern	Transportation	United Kingdom	3	2
-Engelberg	Restaurant	United Kingdom	2	3
-Engelberg	Shopping	United Kingdom	3	3
-Engelberg	Supermarket	United Kingdom	3	2
-Engelberg	Transportation	United Kingdom	5	3
-Hergiswil NW	Shopping	United Kingdom	5	2
-Interlaken	Supermarket	United Kingdom	2	2
-Kriens	Hotel	United Kingdom	3	5
-Kriens	Restaurant	United Kingdom	3	3
-Kriens	Service Stations	United Kingdom	2	3
-Kriens	Shopping	United Kingdom	3	5
-Kriens	Transportation	United Kingdom	3	8
-Luzern	Bakeries	United Kingdom	2	8
-Luzern	Clocks, Jewelery	United Kingdom	8	5
-Luzern	Electronic Sales	United Kingdom	2	5
-Luzern	FoodStore	United Kingdom	2	1
-Luzern	Hotel	United Kingdom	5	8
-Luzern	Other	United Kingdom	5	3
-Luzern	Restaurant	United Kingdom	3	13
-Luzern	Service Stations	United Kingdom	3	2
-Luzern	Shopping	United Kingdom	3	8
-Luzern	Supermarket	United Kingdom	2	8
-Luzern	Tourist Attractions	United Kingdom	2	5
-Luzern	Transportation	United Kingdom	3	5
-Zürich	Hotel	United Kingdom	5	2
-Zürich	Other	United Kingdom	5	2
-Zürich	Restaurant	United Kingdom	3	5
-Zürich	Shopping	United Kingdom	2	1
-Zürich	Supermarket	United Kingdom	2	3
-Zürich Flughafen	Restaurant	United Kingdom	2	3
-Alpnachstad	Transportation	Hong Kong	5	2
-Engelberg	Restaurant	Hong Kong	3	2
-Engelberg	Shopping	Hong Kong	5	1
-Engelberg	Transportation	Hong Kong	5	1
-Interlaken	Shopping	Hong Kong	2	1
-Kriens	Hotel	Hong Kong	3	2
-Luzern	Bakeries	Hong Kong	2	3
-Luzern	Clocks, Jewelery	Hong Kong	21	8
-Luzern	Hotel	Hong Kong	3	2
-Luzern	Restaurant	Hong Kong	3	5
-Luzern	Shopping	Hong Kong	3	5
-Luzern	Supermarket	Hong Kong	2	5
-Luzern	Tourist Attractions	Hong Kong	3	2
-Zürich	Restaurant	Hong Kong	3	1
-Zürich	Shopping	Hong Kong	5	2
-Zürich	Supermarket	Hong Kong	2	2
-Basel	Other	Italia	5	2
-Kriens	Hotel	Italia	3	5
-Kriens	Shopping	Italia	3	3
-Kriens	Transportation	Italia	3	3
-Luzern	Bakeries	Italia	2	5
-Luzern	Electronic Sales	Italia	2	5
-Luzern	Hotel	Italia	5	5
-Luzern	Museum, Theater	Italia	2	2
-Luzern	Other	Italia	3	2
-Luzern	Restaurant	Italia	2	8
-Luzern	Shopping	Italia	2	5
-Luzern	Supermarket	Italia	2	5
-Luzern	Tourist Attractions	Italia	2	5
-Luzern	Transportation	Italia	3	2
-Monte Carasso	Service Stations	Italia	3	2
-Zürich	Restaurant	Italia	3	3
-Zürich	Shopping	Italia	3	2
-Alpnachstad	Restaurant	Japan	2	1
-Alpnachstad	Transportation	Japan	3	3
-Bern	Supermarket	Japan	2	1
-Engelberg	Transportation	Japan	3	2
-Grindelwald	Hotel	Japan	5	2
-Grindelwald	Supermarket	Japan	2	2
-Grindelwald	Transportation	Japan	2	2
-Interlaken	Supermarket	Japan	2	3
-Kriens	Hotel	Japan	3	3
-Kriens	Shopping	Japan	2	3
-Kriens	Transportation	Japan	3	3
-Luzern	Bakeries	Japan	2	5
-Luzern	Clocks, Jewelery	Japan	8	3
-Luzern	Electronic Sales	Japan	2	2
-Luzern	Hotel	Japan	5	3
-Luzern	Museum, Theater	Japan	3	2
-Luzern	Restaurant	Japan	3	5
-Luzern	Shopping	Japan	2	5
-Luzern	Supermarket	Japan	2	8
-Luzern	Tourist Attractions	Japan	3	3
-Luzern	Transportation	Japan	3	3
-Vitznau	Transportation	Japan	3	1
-Zermatt	Hotel	Japan	5	1
-Zermatt	Supermarket	Japan	2	2
-Zürich	FoodStore	Japan	2	2
-Zürich	Hotel	Japan	5	2
-Zürich	Other	Japan	2	2
-Zürich	Restaurant	Japan	3	3
-Zürich	Supermarket	Japan	3	3
-Alpnachstad	Restaurant	Russia	2	3
-Alpnachstad	Transportation	Russia	3	2
-Bern	Restaurant	Russia	2	2
-Bern	Shopping	Russia	3	2
-Bern	Supermarket	Russia	2	2
-Bern	Transportation	Russia	2	1
-Interlaken	Bakeries	Russia	2	1
-Interlaken	Clocks, Jewelery	Russia	3	2
-Interlaken	Shopping	Russia	5	3
-Kriens	Hotel	Russia	3	5
-Kriens	Restaurant	Russia	2	3
-Kriens	Service Stations	Russia	3	1
-Kriens	Shopping	Russia	3	3
-Kriens	Transportation	Russia	3	5
-Luzern	Bakeries	Russia	2	8
-Luzern	Clocks, Jewelery	Russia	8	5
-Luzern	Electronic Sales	Russia	2	3
-Luzern	Hotel	Russia	5	5
-Luzern	Museum, Theater	Russia	2	2
-Luzern	Other	Russia	3	3
-Luzern	Restaurant	Russia	2	8
-Luzern	Shopping	Russia	3	13
-Luzern	Supermarket	Russia	2	8
-Luzern	Tourist Attractions	Russia	2	5
-Luzern	Transportation	Russia	2	3
-Zürich	FoodStore	Russia	2	2
-Zürich	Hotel	Russia	5	2
-Zürich	Other	Russia	2	2
-Zürich	Restaurant	Russia	3	3
-Zürich	Shopping	Russia	5	5
-Zürich	Supermarket	Russia	2	3
-Interlaken	Clocks, Jewelery	Thailand	8	2
-Luzern	Bakeries	Thailand	3	2
-Luzern	Clocks, Jewelery	Thailand	13	5
-Luzern	Hotel	Thailand	8	3
-Luzern	Restaurant	Thailand	5	3
-Luzern	Shopping	Thailand	5	5
-Luzern	Supermarket	Thailand	3	2
-Zürich	Shopping	Thailand	13	1
-Affoltern am Albis	Service Stations	United States	2	2
-Alpnachstad	Restaurant	United States	2	5
-Alpnachstad	Shopping	United States	2	3
-Alpnachstad	Transportation	United States	5	8
-Basel	Restaurant	United States	3	3
-Basel	Supermarket	United States	2	3
-Bellinzona	Restaurant	United States	2	2
-Bellinzona	Service Stations	United States	2	5
-Bern	Hotel	United States	5	2
-Bern	Other	United States	2	2
-Bern	Restaurant	United States	3	3
-Bern	Supermarket	United States	1	2
-Bern	Transportation	United States	3	5
-Brunnen	Shopping	United States	5	1
-Engelberg	Hotel	United States	3	3
-Engelberg	Other	United States	2	5
-Engelberg	Restaurant	United States	2	8
-Engelberg	Shopping	United States	3	5
-Engelberg	Supermarket	United States	2	3
-Engelberg	Transportation	United States	3	5
-Genève	Restaurant	United States	2	2
-Glattbrugg	Hotel	United States	5	3
-Goldau	Bakeries	United States	2	3
-Grindelwald	Shopping	United States	3	2
-Grindelwald	Supermarket	United States	3	2
-Interlaken	Clocks, Jewelery	United States	3	2
-Interlaken	Hotel	United States	5	3
-Interlaken	Restaurant	United States	3	3
-Interlaken	Service Stations	United States	2	3
-Interlaken	Shopping	United States	5	2
-Interlaken	Supermarket	United States	2	5
-Interlaken	Transportation	United States	2	2
-Kriens	Hotel	United States	2	13
-Kriens	Restaurant	United States	2	5
-Kriens	Service Stations	United States	3	3
-Kriens	Shopping	United States	3	13
-Kriens	Supermarket	United States	2	1
-Kriens	Transportation	United States	3	13
-Lugano	Hotel	United States	2	1
-Lugano	Restaurant	United States	3	1
-Luzern	Bakeries	United States	2	21
-Luzern	Clocks, Jewelery	United States	13	13
-Luzern	Electronic Sales	United States	2	5
-Luzern	FoodStore	United States	2	5
-Luzern	Hotel	United States	5	13
-Luzern	Museum, Theater	United States	3	3
-Luzern	Other	United States	5	5
-Luzern	Restaurant	United States	2	21
-Luzern	Service Stations	United States	3	2
-Luzern	Shopping	United States	3	21
-Luzern	Supermarket	United States	2	21
-Luzern	Tourist Attractions	United States	3	8
-Luzern	Transportation	United States	3	8
-Monte Carasso	Restaurant	United States	3	2
-Monte Carasso	Service Stations	United States	2	2
-Mürren	Hotel	United States	5	2
-Mürren	Restaurant	United States	3	3
-Mürren	Transportation	United States	3	2
-Pratteln	Restaurant	United States	2	3
-Rigi Kaltbad	Hotel	United States	5	1
-Rigi Kulm	Hotel	United States	2	3
-Stans	Restaurant	United States	2	5
-Stans	Shopping	United States	3	3
-Stans	Transportation	United States	3	3
-Weggis	Hotel	United States	2	3
-Weggis	Restaurant	United States	3	1
-Weggis	Transportation	United States	3	2
-Wengen	Hotel	United States	5	3
-Wengen	Supermarket	United States	2	2
-Zürich	Bakeries	United States	2	3
-Zürich	Bar	United States	3	2
-Zürich	Electronic Sales	United States	2	1
-Zürich	FoodStore	United States	2	3
-Zürich	Hotel	United States	5	8
-Zürich	Other	United States	3	3
-Zürich	Restaurant	United States	3	8
-Zürich	Shopping	United States	3	5
-Zürich	Supermarket	United States	2	5
-Zürich	Transportation	United States	3	2
-Zürich	Travel Agency	United States	5	3
-Zürich Flughafen	Bar	United States	2	2
-Zürich Flughafen	Restaurant	United States	2	5
+<pre id="touristsallcategory" style="display:none">
+Daysbefore	Location	iso2	average	sum
+9	Engelberg	AE	2.00	1
+9	Zürich	AE	5.00	1
+8	Mendrisio	AE	5.00	2
+8	Zürich	AE	5.00	2
+7	Engelberg	AE	3.00	1
+7	Luzern	AE	3.50	3
+7	Mendrisio	AE	5.00	1
+6	Luzern	AE	3.00	2
+5	Bern	AE	2.00	1
+5	Interlaken	AE	2.50	3
+5	Luzern	AE	5.00	2
+5	Zürich	AE	4.00	3
+4	Genève	AE	5.00	2
+4	Interlaken	AE	2.00	2
+4	Luzern	AE	5.25	9
+4	Zermatt	AE	3.00	1
+4	Zürich	AE	3.00	2
+3	Interlaken	AE	13.00	1
+3	Lauterbrunnen	AE	5.00	1
+3	Luzern	AE	2.67	9
+3	Zürich	AE	3.33	6
+2	Bern	AE	2.00	2
+2	Engelberg	AE	4.00	4
+2	Genève	AE	3.00	1
+2	Grindelwald	AE	2.00	2
+2	Interlaken	AE	4.25	7
+2	Kriens	AE	3.67	6
+2	Luzern	AE	3.80	14
+2	Mendrisio	AE	5.00	3
+2	Zürich	AE	4.00	11
+1	Broc	AE	5.00	1
+1	Engelberg	AE	3.75	10
+1	Genève	AE	5.00	1
+1	Grindelwald	AE	3.50	2
+1	Interlaken	AE	3.60	13
+1	Jungfraujoch	AE	3.00	3
+1	Kriens	AE	3.67	6
+1	Luzern	AE	4.50	27
+1	Mendrisio	AE	5.00	3
+1	Zürich	AE	4.00	13
+1	Zürich Flughafen	AE	3.00	1
+0	Engelberg	AE	3.67	9
+0	Interlaken	AE	2.33	3
+0	Kriens	AE	2.80	15
+0	Luzern	AE	4.30	47
+0	Mendrisio	AE	5.00	3
+0	Zürich	AE	7.75	9
+-1	Bern	AE	5.00	2
+-1	Broc	AE	5.00	2
+-1	Engelberg	AE	3.25	12
+-1	Interlaken	AE	2.60	11
+-1	Kriens	AE	3.50	3
+-1	Luzern	AE	4.43	27
+-1	Mendrisio	AE	5.00	2
+-1	Zürich	AE	5.80	15
+-1	Zürich Flughafen	AE	2.00	2
+-2	Engelberg	AE	3.00	7
+-2	Genève	AE	3.00	4
+-2	Glattbrugg	AE	3.00	1
+-2	Interlaken	AE	2.00	11
+-2	Kriens	AE	2.00	2
+-2	Luzern	AE	5.20	18
+-2	Mendrisio	AE	5.00	2
+-2	Zürich	AE	4.00	13
+-3	Broc	AE	5.00	1
+-3	Engelberg	AE	2.00	2
+-3	Genève	AE	5.00	2
+-3	Interlaken	AE	4.33	7
+-3	Kriens	AE	3.00	2
+-3	Luzern	AE	5.75	11
+-3	Mendrisio	AE	5.00	3
+-3	Zürich	AE	4.00	14
+-4	Broc	AE	3.00	2
+-4	Genève	AE	2.00	3
+-4	Interlaken	AE	3.25	8
+-4	Luzern	AE	6.00	7
+-4	Mendrisio	AE	8.00	2
+-4	Zürich	AE	4.20	12
+-5	Genève	AE	5.00	2
+-5	Luzern	AE	5.00	1
+-5	Mendrisio	AE	5.00	1
+-5	Zürich	AE	3.75	11
+-5	Zürich Flughafen	AE	2.50	2
+-6	Luzern	AE	3.00	3
+-6	Zürich	AE	3.50	10
+-7	Luzern	AE	5.00	3
+-7	Zürich	AE	3.25	10
+-8	Luzern	AE	2.00	1
+-8	Zürich	AE	6.67	7
+-9	Genève	AE	5.00	2
+-9	Zürich	AE	3.00	1
+-10	Genève	AE	13.00	2
+-10	Luzern	AE	5.00	1
+-10	Zürich	AE	2.00	3
+8	Luzern	AU	2.00	4
+8	Zürich	AU	2.00	1
+7	Luzern	AU	2.00	1
+6	Luzern	AU	2.00	2
+5	Lauterbrunnen	AU	3.00	1
+5	Luzern	AU	3.00	2
+4	Grindelwald	AU	3.50	3
+4	Luzern	AU	3.50	4
+4	Zürich	AU	3.00	1
+3	Interlaken	AU	2.00	1
+3	Lauterbrunnen	AU	3.00	2
+3	Luzern	AU	4.00	6
+3	Zürich	AU	2.67	8
+2	Bern	AU	2.50	3
+2	Engelberg	AU	2.00	1
+2	Grindelwald	AU	2.00	1
+2	Interlaken	AU	2.00	2
+2	Kriens	AU	3.00	1
+2	Luzern	AU	3.20	14
+2	St. Gallen	AU	3.00	1
+2	Zürich	AU	2.67	6
+1	Basel	AU	2.00	1
+1	Bern	AU	3.00	2
+1	Engelberg	AU	3.00	2
+1	Interlaken	AU	3.00	1
+1	Kriens	AU	3.00	3
+1	Lauterbrunnen	AU	3.00	2
+1	Luzern	AU	3.13	29
+1	Monte Carasso	AU	2.00	3
+1	Pratteln	AU	1.00	2
+1	Zürich	AU	3.25	11
+0	Basel	AU	1.00	1
+0	Bern	AU	2.00	1
+0	Engelberg	AU	2.50	8
+0	Interlaken	AU	2.00	2
+0	Kriens	AU	3.00	13
+0	Lauterbrunnen	AU	2.00	2
+0	Luzern	AU	2.64	57
+0	Stans	AU	2.00	4
+0	Zürich	AU	2.67	9
+-1	Bern	AU	2.50	3
+-1	Engelberg	AU	4.00	5
+-1	Ibach	AU	3.00	2
+-1	Interlaken	AU	3.40	7
+-1	Jungfraujoch	AU	3.00	2
+-1	Kriens	AU	3.00	8
+-1	Lauterbrunnen	AU	3.00	3
+-1	Lugano	AU	2.00	1
+-1	Luzern	AU	3.33	33
+-1	Stans	AU	3.00	1
+-1	Zürich	AU	3.00	12
+-1	Zürich Flughafen	AU	2.00	2
+-2	Basel	AU	2.00	1
+-2	Bern	AU	3.00	2
+-2	Interlaken	AU	2.50	3
+-2	Luzern	AU	2.80	16
+-2	St. Moritz	AU	2.00	1
+-2	Zürich	AU	3.40	11
+-2	Zürich Flughafen	AU	2.00	3
+-3	Basel	AU	2.00	2
+-3	Interlaken	AU	2.00	2
+-3	Luzern	AU	3.75	9
+-3	Zermatt	AU	1.00	2
+-3	Zürich	AU	3.00	3
+-4	Luzern	AU	2.50	5
+-4	Zermatt	AU	1.00	2
+-4	Zürich	AU	3.00	2
+-5	Zürich	AU	2.00	2
+-6	Luzern	AU	2.00	3
+-7	Basel	AU	2.00	1
+-7	Luzern	AU	2.00	2
+-8	Luzern	AU	3.50	3
+-8	Zürich	AU	2.00	2
+-9	Luzern	AU	2.00	2
+9	Luzern	CA	2.00	2
+9	Zürich	CA	3.00	1
+8	Luzern	CA	2.00	3
+8	Zürich	CA	2.00	1
+7	Luzern	CA	1.00	2
+6	Genève	CA	2.00	1
+6	Luzern	CA	2.33	5
+5	Broc	CA	2.00	2
+5	Luzern	CA	2.00	4
+5	Zermatt	CA	3.00	2
+5	Zürich	CA	5.00	1
+4	Basel	CA	3.00	1
+4	Genève	CA	2.00	1
+4	Luzern	CA	2.50	4
+3	Bern	CA	3.00	2
+3	Luzern	CA	2.25	8
+3	Zürich	CA	2.33	7
+2	Bern	CA	2.33	7
+2	Grindelwald	CA	4.00	3
+2	Interlaken	CA	2.00	2
+2	Kriens	CA	2.00	1
+2	Luzern	CA	2.80	14
+2	Zermatt	CA	5.00	1
+2	Zürich	CA	3.25	9
+1	Bern	CA	2.33	5
+1	Engelberg	CA	5.00	1
+1	Interlaken	CA	2.00	1
+1	Kriens	CA	3.00	2
+1	Luzern	CA	3.50	27
+1	Zürich	CA	3.20	12
+0	Alpnachstad	CA	3.00	3
+0	Bern	CA	3.00	1
+0	Engelberg	CA	2.50	3
+0	Kriens	CA	2.67	13
+0	Luzern	CA	3.70	47
+0	Stans	CA	2.00	1
+0	Zürich	CA	2.67	7
+-1	Basel	CA	2.50	2
+-1	Bern	CA	3.00	7
+-1	Engelberg	CA	2.00	1
+-1	Interlaken	CA	2.00	2
+-1	Kriens	CA	4.00	5
+-1	Lauterbrunnen	CA	2.00	2
+-1	Luzern	CA	3.50	26
+-1	Zürich	CA	3.25	12
+-2	Bern	CA	3.00	1
+-2	Grindelwald	CA	5.00	2
+-2	Interlaken	CA	2.00	3
+-2	Luzern	CA	3.60	15
+-2	Sion	CA	2.00	1
+-2	Wengen	CA	2.00	2
+-2	Zürich	CA	2.67	9
+-3	Bern	CA	2.67	4
+-3	Grindelwald	CA	3.00	1
+-3	Interlaken	CA	2.00	1
+-3	Luzern	CA	3.60	12
+-3	Zürich	CA	2.50	5
+-4	Bern	CA	5.00	2
+-4	Interlaken	CA	1.00	1
+-4	Luzern	CA	3.40	9
+-4	Zermatt	CA	2.00	3
+-5	Interlaken	CA	2.00	1
+-5	Luzern	CA	3.50	5
+-6	Interlaken	CA	2.00	2
+-6	Luzern	CA	2.00	3
+-6	Zermatt	CA	3.00	2
+-6	Zürich	CA	3.00	1
+-7	Broc	CA	2.00	1
+-7	Luzern	CA	2.33	5
+-8	Luzern	CA	2.00	5
+-9	Genève	CA	2.00	1
+-9	Luzern	CA	1.00	2
+-9	Zürich	CA	2.00	1
+-10	Luzern	CA	2.00	2
+10	Lausanne	CN	2.00	1
+9	Bern	CN	5.00	1
+9	Lausanne	CN	1.50	5
+8	Genève	CN	6.50	2
+8	Lausanne	CN	2.00	2
+8	Luzern	CN	2.00	1
+7	Bern	CN	3.00	3
+7	Genève	CN	5.00	4
+7	Luzern	CN	2.00	3
+7	Montreux	CN	2.00	2
+7	Zermatt	CN	2.00	2
+7	Zürich	CN	5.00	2
+6	Bern	CN	3.00	2
+6	Genève	CN	9.00	5
+6	Interlaken	CN	21.00	2
+6	Lausanne	CN	1.50	4
+6	Luzern	CN	6.00	5
+6	Zürich	CN	4.00	5
+5	Bern	CN	3.00	4
+5	Genève	CN	4.00	7
+5	Interlaken	CN	21.00	2
+5	Lausanne	CN	5.00	2
+5	Luzern	CN	2.00	3
+5	Montreux	CN	2.00	1
+5	Zermatt	CN	2.00	1
+5	Zürich	CN	3.00	8
+4	Bern	CN	5.00	2
+4	Genève	CN	4.80	13
+4	Interlaken	CN	5.75	9
+4	Lausanne	CN	5.50	4
+4	Luzern	CN	2.00	7
+4	Mendrisio	CN	5.00	2
+4	Zermatt	CN	5.00	9
+4	Zürich	CN	4.00	11
+3	Bern	CN	3.67	8
+3	Genève	CN	7.20	14
+3	Grindelwald	CN	3.75	9
+3	Interlaken	CN	6.14	21
+3	Jungfraujoch	CN	5.00	3
+3	Lausanne	CN	3.00	6
+3	Lauterbrunnen	CN	2.50	5
+3	Luzern	CN	5.60	15
+3	Mendrisio	CN	5.00	3
+3	Montreux	CN	3.50	3
+3	Mürren	CN	3.50	4
+3	Wengen	CN	5.00	4
+3	Zermatt	CN	4.00	9
+3	Zürich	CN	4.00	16
+3	Zürich Flughafen	CN	3.00	1
+2	Basel	CN	2.00	3
+2	Bern	CN	5.14	19
+2	Broc	CN	2.00	2
+2	Genève	CN	5.60	17
+2	Grindelwald	CN	4.00	12
+2	Interlaken	CN	5.67	43
+2	Jungfraujoch	CN	3.00	3
+2	Kriens	CN	5.00	2
+2	Lausanne	CN	3.50	12
+2	Lauterbrunnen	CN	3.50	5
+2	Lugano	CN	9.00	6
+2	Luzern	CN	5.57	24
+2	Mendrisio	CN	5.00	3
+2	Monte Carasso	CN	2.50	3
+2	Montreux	CN	3.50	4
+2	Mürren	CN	3.75	10
+2	Schaffhausen	CN	2.00	2
+2	St. Moritz	CN	5.00	2
+2	Thun	CN	2.00	1
+2	Wengen	CN	4.50	9
+2	Zermatt	CN	3.50	5
+2	Zürich	CN	4.71	27
+1	Affoltern am Albis	CN	2.33	6
+1	Alpnachstad	CN	5.00	3
+1	Basel	CN	2.00	5
+1	Bern	CN	6.67	16
+1	Broc	CN	2.00	3
+1	Engelberg	CN	5.33	22
+1	Genève	CN	7.60	13
+1	Glattbrugg	CN	3.50	5
+1	Grindelwald	CN	4.25	11
+1	Ibach	CN	5.00	1
+1	Interlaken	CN	5.67	86
+1	Jungfraujoch	CN	12.00	11
+1	Kreuzlingen	CN	2.00	1
+1	Kriens	CN	3.25	11
+1	Lausanne	CN	2.00	2
+1	Lauterbrunnen	CN	3.50	5
+1	Lugano	CN	7.50	3
+1	Luzern	CN	4.73	84
+1	Mendrisio	CN	5.00	5
+1	Monte Carasso	CN	2.00	10
+1	Montreux	CN	2.00	3
+1	Mürren	CN	3.33	9
+1	Pratteln	CN	3.00	5
+1	Rigi Kulm	CN	3.00	1
+1	St. Moritz	CN	5.00	1
+1	Stans	CN	2.00	2
+1	Thun	CN	2.50	5
+1	Vitznau	CN	5.00	4
+1	Weggis	CN	5.00	4
+1	Wengen	CN	4.60	15
+1	Winterthur	CN	2.50	5
+1	Zermatt	CN	3.33	7
+1	Zug	CN	6.20	14
+1	Zürich	CN	5.00	33
+0	Affoltern am Albis	CN	2.33	8
+0	Alpnachstad	CN	3.67	11
+0	Basel	CN	2.00	5
+0	Bellinzona	CN	2.00	8
+0	Bern	CN	4.00	14
+0	Brunnen	CN	3.00	2
+0	Engelberg	CN	5.33	32
+0	Genève	CN	4.00	8
+0	Glattbrugg	CN	5.00	3
+0	Goldau	CN	2.00	3
+0	Grindelwald	CN	3.33	8
+0	Hergiswil NW	CN	5.00	2
+0	Interlaken	CN	5.33	78
+0	Jungfraujoch	CN	3.00	5
+0	Kriens	CN	3.00	24
+0	Lauterbrunnen	CN	5.00	2
+0	Lugano	CN	8.00	3
+0	Luzern	CN	3.69	150
+0	Mendrisio	CN	5.00	5
+0	Monte Carasso	CN	2.00	16
+0	Mürren	CN	3.75	8
+0	Pratteln	CN	2.50	11
+0	Rigi Kulm	CN	2.00	3
+0	Stans	CN	2.00	5
+0	Vitznau	CN	4.00	6
+0	Weggis	CN	3.33	7
+0	Wengen	CN	5.00	5
+0	Winterthur	CN	3.00	2
+0	Zug	CN	6.20	14
+0	Zürich	CN	5.00	33
+0	Zürich Flughafen	CN	3.00	1
+-1	Alpnachstad	CN	3.50	6
+-1	Basel	CN	2.00	13
+-1	Bellinzona	CN	2.00	7
+-1	Bern	CN	5.00	24
+-1	Broc	CN	3.00	2
+-1	Brunnen	CN	5.00	3
+-1	Engelberg	CN	6.00	36
+-1	Fribourg	CN	3.00	2
+-1	Genève	CN	5.33	21
+-1	Goldau	CN	2.00	1
+-1	Grindelwald	CN	4.00	8
+-1	Interlaken	CN	4.56	102
+-1	Jungfraujoch	CN	9.00	13
+-1	Kriens	CN	3.00	19
+-1	Lausanne	CN	3.50	15
+-1	Lauterbrunnen	CN	3.60	11
+-1	Lugano	CN	8.75	7
+-1	Luzern	CN	4.27	86
+-1	Mendrisio	CN	5.00	5
+-1	Montreux	CN	3.00	7
+-1	Mürren	CN	3.25	15
+-1	Pratteln	CN	2.00	7
+-1	Rigi Kulm	CN	2.00	2
+-1	Stans	CN	2.00	5
+-1	Vevey	CN	5.00	2
+-1	Vitznau	CN	3.00	2
+-1	Weggis	CN	3.67	6
+-1	Wengen	CN	3.25	10
+-1	Zermatt	CN	2.50	3
+-1	Zug	CN	3.00	3
+-1	Zürich	CN	6.13	45
+-1	Zürich Flughafen	CN	3.50	6
+-2	Alpnachstad	CN	5.00	2
+-2	Basel	CN	2.00	5
+-2	Bern	CN	6.00	21
+-2	Broc	CN	3.00	2
+-2	Engelberg	CN	5.00	2
+-2	Genève	CN	5.83	29
+-2	Grindelwald	CN	4.25	10
+-2	Interlaken	CN	4.75	36
+-2	Jungfraujoch	CN	5.00	5
+-2	Kriens	CN	2.00	3
+-2	Lausanne	CN	3.00	10
+-2	Lauterbrunnen	CN	3.50	6
+-2	Lugano	CN	8.00	3
+-2	Luzern	CN	5.83	24
+-2	Mendrisio	CN	5.00	5
+-2	Montreux	CN	2.33	8
+-2	Mürren	CN	2.67	9
+-2	Pratteln	CN	3.00	3
+-2	Schaffhausen	CN	3.00	3
+-2	Vevey	CN	12.00	3
+-2	Wengen	CN	3.50	3
+-2	Zermatt	CN	3.50	6
+-2	Zürich	CN	4.88	37
+-2	Zürich Flughafen	CN	3.50	6
+-3	Bern	CN	4.00	14
+-3	Genève	CN	5.50	17
+-3	Grindelwald	CN	4.00	8
+-3	Interlaken	CN	5.00	17
+-3	Jungfraujoch	CN	3.00	3
+-3	Lausanne	CN	4.00	5
+-3	Lauterbrunnen	CN	2.00	3
+-3	Luzern	CN	6.25	14
+-3	Mendrisio	CN	5.00	5
+-3	Montreux	CN	11.50	4
+-3	Mürren	CN	4.00	6
+-3	Pratteln	CN	5.00	1
+-3	Wengen	CN	5.00	2
+-3	Zermatt	CN	3.33	5
+-3	Zug	CN	21.00	2
+-3	Zürich	CN	7.43	23
+-3	Zürich Flughafen	CN	2.00	3
+-4	Bern	CN	3.75	10
+-4	Genève	CN	5.83	20
+-4	Grindelwald	CN	3.67	6
+-4	Interlaken	CN	7.60	11
+-4	Lausanne	CN	4.33	6
+-4	Lauterbrunnen	CN	2.00	3
+-4	Luzern	CN	9.33	9
+-4	Mendrisio	CN	5.00	1
+-4	Montreux	CN	4.00	2
+-4	Mürren	CN	4.00	5
+-4	Vevey	CN	2.00	2
+-4	Zermatt	CN	5.00	4
+-4	Zürich	CN	5.86	18
+-4	Zürich Flughafen	CN	3.00	2
+-5	Bern	CN	6.50	4
+-5	Genève	CN	8.00	14
+-5	Interlaken	CN	2.00	2
+-5	Luzern	CN	5.00	7
+-5	Mendrisio	CN	5.00	3
+-5	Mürren	CN	5.00	2
+-5	Zermatt	CN	3.33	7
+-5	Zürich	CN	9.00	6
+-5	Zürich Flughafen	CN	2.00	1
+-6	Genève	CN	5.60	11
+-6	Luzern	CN	5.00	8
+-6	Montreux	CN	2.00	2
+-6	Zermatt	CN	3.50	4
+-6	Zürich	CN	7.80	13
+-7	Bern	CN	5.00	2
+-7	Genève	CN	3.25	9
+-7	Luzern	CN	4.25	10
+-7	Mendrisio	CN	5.00	3
+-7	Zermatt	CN	3.00	4
+-7	Zürich	CN	5.25	12
+-7	Zürich Flughafen	CN	3.00	3
+-8	Broc	CN	3.00	2
+-8	Genève	CN	13.00	4
+-8	Luzern	CN	4.00	5
+-8	Zermatt	CN	2.00	2
+-8	Zürich	CN	6.50	7
+-8	Zürich Flughafen	CN	3.00	1
+-9	Luzern	CN	5.00	6
+-9	Zürich	CN	4.00	6
+-9	Zürich Flughafen	CN	5.00	2
+-10	Luzern	CN	5.00	3
+-10	Zürich	CN	2.50	3
+10	Luzern	DE	2.50	3
+9	Luzern	DE	2.33	7
+8	Luzern	DE	2.33	7
+7	Luzern	DE	3.33	10
+7	Zürich	DE	2.00	1
+6	Kriens	DE	3.00	2
+6	Luzern	DE	3.75	13
+5	Luzern	DE	2.67	10
+5	Zürich	DE	3.00	4
+4	Bern	DE	3.00	2
+4	Kriens	DE	2.00	1
+4	Luzern	DE	3.25	12
+4	Zürich	DE	2.00	3
+3	Bern	DE	2.00	1
+3	Kriens	DE	3.00	2
+3	Luzern	DE	3.50	16
+3	Vevey	DE	5.00	2
+3	Zürich	DE	2.67	6
+2	Basel	DE	5.00	1
+2	Bern	DE	3.67	6
+2	Engelberg	DE	5.00	1
+2	Interlaken	DE	2.00	2
+2	Kriens	DE	3.00	5
+2	Luzern	DE	3.25	24
+2	Zürich	DE	2.25	11
+1	Alpnachstad	DE	5.00	2
+1	Basel	DE	2.00	1
+1	Bern	DE	4.25	9
+1	Engelberg	DE	3.50	6
+1	Grindelwald	DE	5.00	2
+1	Hergiswil NW	DE	3.00	1
+1	Interlaken	DE	3.00	5
+1	Jungfraujoch	DE	2.00	1
+1	Kriens	DE	3.40	11
+1	Luzern	DE	3.36	45
+1	Thun	DE	2.00	1
+1	Vitznau	DE	3.00	2
+1	Weggis	DE	4.00	3
+1	Wengen	DE	3.00	1
+1	Zürich	DE	2.50	15
+0	Affoltern am Albis	DE	3.00	2
+0	Alpnachstad	DE	3.00	3
+0	Basel	DE	3.00	4
+0	Bern	DE	2.00	4
+0	Engelberg	DE	4.00	3
+0	Interlaken	DE	2.00	2
+0	Kriens	DE	3.00	22
+0	Luzern	DE	3.00	71
+0	Vitznau	DE	5.00	2
+0	Zürich	DE	2.40	11
+-1	Alpnachstad	DE	5.00	2
+-1	Basel	DE	1.33	6
+-1	Bern	DE	3.50	3
+-1	Engelberg	DE	4.00	5
+-1	Grindelwald	DE	5.00	2
+-1	Interlaken	DE	2.00	2
+-1	Kriens	DE	3.50	11
+-1	Luzern	DE	3.08	46
+-1	Stans	DE	5.00	2
+-1	Weggis	DE	5.00	3
+-1	Zürich	DE	2.86	19
+-1	Zürich Flughafen	DE	2.00	3
+-2	Basel	DE	2.50	3
+-2	Bern	DE	6.00	6
+-2	Grindelwald	DE	5.00	3
+-2	Lausanne	DE	2.00	1
+-2	Luzern	DE	3.14	24
+-2	Rigi Kaltbad	DE	3.00	1
+-2	Vitznau	DE	5.00	2
+-2	Weggis	DE	5.50	3
+-2	Zürich	DE	2.00	6
+-3	Bern	DE	3.00	6
+-3	Grindelwald	DE	5.00	1
+-3	Kriens	DE	3.00	1
+-3	Luzern	DE	2.86	20
+-3	Zürich	DE	2.25	8
+-3	Zürich Flughafen	DE	2.00	1
+-4	Kriens	DE	3.00	1
+-4	Luzern	DE	2.83	17
+-4	Zürich	DE	3.33	3
+-5	Bern	DE	5.00	2
+-5	Kriens	DE	3.00	2
+-5	Luzern	DE	2.75	13
+-6	Luzern	DE	3.00	11
+-6	Mendrisio	DE	5.00	2
+-6	Zürich	DE	1.00	2
+-7	Luzern	DE	2.00	10
+-7	Zürich	DE	2.00	1
+-8	Luzern	DE	1.75	11
+-8	Zürich	DE	1.00	1
+-9	Luzern	DE	2.33	8
+-10	Luzern	DE	2.00	3
+9	Luzern	ES	2.00	2
+8	Luzern	ES	2.00	1
+7	Luzern	ES	3.00	6
+7	Zürich	ES	5.00	1
+6	La Croix-de-Rozon	ES	3.00	1
+6	Lauterbrunnen	ES	5.00	2
+6	Luzern	ES	2.50	4
+5	Bern	ES	5.00	1
+5	Broc	ES	2.00	2
+5	Luzern	ES	2.67	6
+5	Zürich	ES	3.00	2
+4	Bern	ES	3.50	4
+4	Broc	ES	2.00	3
+4	Fribourg	ES	3.00	1
+4	Genève	ES	2.00	3
+4	La Croix-de-Rozon	ES	3.00	3
+4	Luzern	ES	2.50	5
+3	Bern	ES	3.50	6
+3	Broc	ES	3.00	2
+3	Genève	ES	3.50	2
+3	Grindelwald	ES	5.00	1
+3	Interlaken	ES	2.00	4
+3	La Croix-de-Rozon	ES	3.00	2
+3	Lauterbrunnen	ES	5.00	2
+3	Luzern	ES	2.33	8
+3	Zermatt	ES	5.00	1
+3	Zürich	ES	2.50	4
+2	Bern	ES	3.00	11
+2	Broc	ES	3.00	3
+2	Grindelwald	ES	3.50	3
+2	Interlaken	ES	2.00	2
+2	Lauterbrunnen	ES	2.00	1
+2	Luzern	ES	3.33	13
+2	Zermatt	ES	3.00	2
+2	Zürich	ES	3.00	7
+1	Alpnachstad	ES	5.00	1
+1	Basel	ES	2.00	1
+1	Bern	ES	2.60	14
+1	Broc	ES	2.00	1
+1	Engelberg	ES	5.00	1
+1	Grindelwald	ES	5.00	2
+1	Interlaken	ES	3.33	8
+1	Kriens	ES	3.00	1
+1	La Croix-de-Rozon	ES	3.00	2
+1	Lauterbrunnen	ES	2.00	3
+1	Luzern	ES	2.57	24
+1	Mürren	ES	3.00	2
+1	Zürich	ES	2.80	13
+0	Affoltern am Albis	ES	3.00	1
+0	Alpnachstad	ES	3.00	4
+0	Bern	ES	3.33	8
+0	Interlaken	ES	2.50	6
+0	Kriens	ES	3.00	15
+0	Luzern	ES	3.33	42
+0	Zürich	ES	2.67	8
+-1	Affoltern am Albis	ES	3.00	2
+-1	Alpnachstad	ES	5.00	1
+-1	Basel	ES	2.00	2
+-1	Bern	ES	2.40	13
+-1	Broc	ES	2.00	2
+-1	Engelberg	ES	4.00	3
+-1	Genève	ES	3.00	1
+-1	Grindelwald	ES	5.00	3
+-1	Interlaken	ES	2.80	9
+-1	Kriens	ES	3.00	4
+-1	Luzern	ES	3.00	29
+-1	Zürich	ES	3.40	13
+-2	Bern	ES	2.75	7
+-2	Broc	ES	2.00	1
+-2	Engelberg	ES	3.00	2
+-2	Genève	ES	2.00	2
+-2	Grindelwald	ES	5.00	3
+-2	Interlaken	ES	2.50	3
+-2	Luzern	ES	3.25	11
+-2	Mürren	ES	5.00	2
+-2	Zürich	ES	2.80	12
+-3	Bern	ES	2.00	4
+-3	Broc	ES	2.00	1
+-3	Genève	ES	2.00	2
+-3	Lauterbrunnen	ES	3.00	4
+-3	Luzern	ES	2.33	7
+-3	Zürich	ES	3.00	3
+-4	Bern	ES	2.00	2
+-4	Genève	ES	5.00	1
+-4	Interlaken	ES	2.00	2
+-4	Luzern	ES	2.50	5
+-4	Zürich	ES	3.50	3
+-5	Luzern	ES	2.00	4
+-6	Luzern	ES	2.00	5
+-7	Luzern	ES	2.00	3
+-8	Luzern	ES	2.50	3
+-10	Luzern	ES	2.00	2
+8	Luzern	FR	3.00	2
+7	Luzern	FR	3.33	5
+6	Luzern	FR	3.00	3
+5	Luzern	FR	2.33	7
+4	Luzern	FR	2.50	4
+3	Basel	FR	2.00	1
+3	Bern	FR	3.00	1
+3	Luzern	FR	2.67	6
+3	Mürren	FR	5.00	1
+3	Zürich	FR	2.50	3
+2	Basel	FR	3.00	1
+2	Bern	FR	1.50	3
+2	Genève	FR	3.00	1
+2	Interlaken	FR	5.00	2
+2	La Croix-de-Rozon	FR	3.00	3
+2	Luzern	FR	3.75	14
+1	Alpnachstad	FR	5.00	1
+1	Basel	FR	2.50	5
+1	Engelberg	FR	5.00	2
+1	Interlaken	FR	3.00	4
+1	Kriens	FR	2.00	2
+1	Luzern	FR	3.33	32
+1	Zürich	FR	2.75	11
+0	Alpnachstad	FR	3.00	2
+0	Engelberg	FR	4.00	4
+0	Genève	FR	5.00	1
+0	Kriens	FR	2.75	15
+0	Luzern	FR	2.83	47
+0	Pratteln	FR	2.00	3
+0	Zürich	FR	2.50	3
+-1	Alpnachstad	FR	5.00	2
+-1	Basel	FR	2.00	2
+-1	Bern	FR	2.50	3
+-1	Engelberg	FR	2.67	4
+-1	Interlaken	FR	3.33	6
+-1	Kriens	FR	5.00	4
+-1	Luzern	FR	2.78	32
+-1	Stans	FR	3.00	1
+-1	Zürich	FR	2.80	9
+-1	Zürich Flughafen	FR	2.00	1
+-2	Engelberg	FR	3.00	2
+-2	Interlaken	FR	2.00	3
+-2	Lausanne	FR	3.00	2
+-2	Luzern	FR	2.80	13
+-2	Zermatt	FR	3.00	1
+-2	Zürich	FR	2.50	5
+-3	Grindelwald	FR	2.00	2
+-3	Luzern	FR	3.50	11
+-4	Bern	FR	2.00	1
+-4	Luzern	FR	3.67	6
+-5	Luzern	FR	3.00	7
+-6	Luzern	FR	3.00	3
+-7	Luzern	FR	2.00	3
+-8	Luzern	FR	3.00	3
+-9	Luzern	FR	3.00	2
+10	Luzern	GB	2.00	2
+10	Zürich	GB	5.00	2
+9	Luzern	GB	2.00	3
+8	Luzern	GB	2.00	3
+7	Luzern	GB	3.50	4
+7	Mendrisio	GB	3.00	1
+6	Genève	GB	2.00	1
+6	Luzern	GB	2.00	5
+5	Luzern	GB	2.50	4
+5	Schaffhausen	GB	2.00	2
+5	Zermatt	GB	3.00	1
+5	Zürich	GB	3.00	2
+4	Basel	GB	2.67	4
+4	Bern	GB	2.00	2
+4	Interlaken	GB	3.00	3
+4	Luzern	GB	3.33	9
+4	Zermatt	GB	2.00	2
+4	Zürich	GB	3.33	6
+3	Basel	GB	2.50	3
+3	Bern	GB	5.00	1
+3	Engelberg	GB	5.00	2
+3	Genève	GB	2.00	2
+3	Grindelwald	GB	2.00	2
+3	Interlaken	GB	2.00	5
+3	Kriens	GB	3.00	2
+3	Lauterbrunnen	GB	2.00	1
+3	Luzern	GB	3.40	16
+3	Zermatt	GB	3.00	2
+3	Zürich	GB	4.33	6
+2	Affoltern am Albis	GB	2.00	1
+2	Basel	GB	2.00	7
+2	Bern	GB	3.50	5
+2	Engelberg	GB	3.00	3
+2	Genève	GB	2.00	3
+2	Grindelwald	GB	2.50	3
+2	Interlaken	GB	2.67	8
+2	Kriens	GB	3.00	6
+2	Luzern	GB	2.71	22
+2	Zürich	GB	3.75	9
+1	Basel	GB	2.00	5
+1	Bern	GB	2.80	12
+1	Engelberg	GB	3.00	7
+1	Genève	GB	2.00	2
+1	Grindelwald	GB	5.00	3
+1	Interlaken	GB	2.40	8
+1	Jungfraujoch	GB	3.00	3
+1	Kriens	GB	4.00	6
+1	Lauterbrunnen	GB	5.00	1
+1	Luzern	GB	3.40	43
+1	Mürren	GB	3.00	2
+1	Vitznau	GB	3.00	2
+1	Zürich	GB	3.33	16
+1	Zürich Flughafen	GB	2.00	1
+0	Alpnachstad	GB	3.00	7
+0	Basel	GB	2.00	4
+0	Bellinzona	GB	3.00	2
+0	Bern	GB	2.33	7
+0	Engelberg	GB	3.25	11
+0	Hergiswil NW	GB	5.00	2
+0	Interlaken	GB	2.00	2
+0	Kriens	GB	2.80	24
+0	Luzern	GB	3.33	71
+0	Zürich	GB	3.40	13
+0	Zürich Flughafen	GB	2.00	3
+-1	Alpnachstad	GB	3.00	2
+-1	Basel	GB	2.00	3
+-1	Bern	GB	2.33	7
+-1	Engelberg	GB	3.33	8
+-1	Genève	GB	2.00	3
+-1	Grindelwald	GB	3.00	2
+-1	Interlaken	GB	4.75	9
+-1	Jungfraujoch	GB	2.00	3
+-1	Kriens	GB	3.67	8
+-1	Lauterbrunnen	GB	3.50	5
+-1	Luzern	GB	4.10	39
+-1	Mürren	GB	3.00	1
+-1	Schaffhausen	GB	2.00	2
+-1	Stans	GB	5.00	1
+-1	Wengen	GB	5.00	1
+-1	Zürich	GB	3.17	16
+-1	Zürich Flughafen	GB	2.50	5
+-2	Basel	GB	3.00	2
+-2	Bern	GB	3.33	7
+-2	Engelberg	GB	2.33	8
+-2	Genève	GB	2.00	7
+-2	Grindelwald	GB	3.50	3
+-2	Interlaken	GB	2.00	3
+-2	Jungfraujoch	GB	3.00	2
+-2	Kriens	GB	3.00	3
+-2	Luzern	GB	3.00	24
+-2	Mürren	GB	3.00	2
+-2	Schaffhausen	GB	2.00	2
+-2	Zürich	GB	3.25	11
+-2	Zürich Flughafen	GB	3.00	3
+-3	Bern	GB	2.00	2
+-3	Engelberg	GB	3.50	3
+-3	Genève	GB	3.00	2
+-3	Interlaken	GB	2.50	4
+-3	Luzern	GB	3.14	17
+-3	Montreux	GB	2.00	1
+-3	Zürich	GB	3.25	7
+-3	Zürich Flughafen	GB	3.00	1
+-4	Bern	GB	2.00	1
+-4	Genève	GB	2.00	2
+-4	Grindelwald	GB	2.00	2
+-4	Interlaken	GB	2.00	3
+-4	Luzern	GB	3.75	11
+-4	Zermatt	GB	2.00	1
+-4	Zürich	GB	3.00	3
+-5	Genève	GB	1.50	4
+-5	Grindelwald	GB	2.00	1
+-5	Interlaken	GB	2.00	1
+-5	Luzern	GB	2.00	11
+-5	Zermatt	GB	2.00	2
+-5	Zürich	GB	2.00	1
+-5	Zürich Flughafen	GB	2.00	2
+-6	Genève	GB	1.00	1
+-6	Grindelwald	GB	2.00	2
+-6	Interlaken	GB	2.00	1
+-6	Luzern	GB	2.00	7
+-6	Zürich	GB	3.00	1
+-7	Grindelwald	GB	2.00	2
+-7	Interlaken	GB	2.00	1
+-7	Luzern	GB	2.00	5
+-8	Luzern	GB	2.00	5
+-9	Genève	GB	2.00	1
+-9	Luzern	GB	2.00	3
+-10	Luzern	GB	2.00	3
+9	Luzern	HK	2.00	1
+6	Luzern	HK	2.00	3
+5	Luzern	HK	2.00	1
+4	Luzern	HK	3.00	1
+4	Zürich	HK	2.00	2
+3	Interlaken	HK	2.00	2
+3	Zürich	HK	2.00	1
+2	Luzern	HK	2.50	5
+2	Zermatt	HK	5.00	2
+2	Zürich	HK	3.00	3
+1	Engelberg	HK	3.00	2
+1	Luzern	HK	4.67	12
+1	Zürich	HK	3.75	10
+0	Alpnachstad	HK	5.00	2
+0	Engelberg	HK	4.33	4
+0	Interlaken	HK	2.00	1
+0	Kriens	HK	3.00	2
+0	Luzern	HK	5.29	30
+0	Zürich	HK	3.33	5
+-1	Engelberg	HK	5.33	8
+-1	Interlaken	HK	21.00	1
+-1	Luzern	HK	7.75	11
+-1	Pratteln	HK	2.00	1
+-1	Zürich	HK	5.00	7
+-2	Luzern	HK	3.75	6
+-2	Zermatt	HK	3.00	2
+-2	Zürich	HK	4.50	6
+-3	Zermatt	HK	2.00	1
+-3	Zürich	HK	3.00	1
+-5	Luzern	HK	2.00	2
+-7	Luzern	HK	2.00	1
+-7	Zürich	HK	3.00	1
+-8	Luzern	HK	3.00	2
+9	Luzern	IT	2.00	3
+8	Luzern	IT	2.00	2
+8	Zürich	IT	1.00	2
+7	Luzern	IT	2.00	2
+6	Bern	IT	5.00	1
+6	Luzern	IT	2.00	2
+5	Luzern	IT	2.00	2
+4	Luzern	IT	2.50	5
+3	Luzern	IT	2.33	6
+3	Zürich	IT	2.00	1
+2	Luzern	IT	3.00	11
+2	Zürich	IT	2.00	3
+1	Alpnachstad	IT	5.00	2
+1	Bern	IT	2.00	2
+1	Kriens	IT	4.00	4
+1	Luzern	IT	2.50	27
+1	Zürich	IT	3.00	8
+0	Basel	IT	5.00	2
+0	Kriens	IT	3.00	11
+0	Luzern	IT	2.50	44
+0	Monte Carasso	IT	3.00	2
+0	Zürich	IT	3.00	5
+-1	Bern	IT	2.50	3
+-1	Interlaken	IT	2.00	2
+-1	Kriens	IT	3.00	1
+-1	Luzern	IT	2.83	22
+-1	Zürich	IT	3.00	6
+-2	Bern	IT	2.50	3
+-2	Luzern	IT	3.00	9
+-2	Mendrisio	IT	5.00	2
+-3	Basel	IT	2.00	1
+-3	Bern	IT	2.00	1
+-3	Luzern	IT	2.50	6
+-4	Genève	IT	2.00	1
+-4	Luzern	IT	2.00	2
+-4	Mendrisio	IT	5.00	2
+-5	Luzern	IT	2.00	3
+-6	Luzern	IT	2.00	2
+-7	Luzern	IT	2.00	3
+-8	Luzern	IT	2.50	2
+-9	Luzern	IT	3.00	2
+9	Luzern	JP	2.00	2
+8	Luzern	JP	1.00	2
+7	Luzern	JP	1.00	3
+7	Zermatt	JP	2.00	1
+7	Zürich	JP	2.00	1
+6	Luzern	JP	5.00	4
+6	Zermatt	JP	2.50	4
+6	Zürich	JP	2.00	2
+5	Bern	JP	2.50	5
+5	Luzern	JP	1.50	5
+5	St. Moritz	JP	2.00	1
+5	Zermatt	JP	3.50	4
+4	Luzern	JP	2.00	3
+4	St. Moritz	JP	2.00	1
+4	Zermatt	JP	3.75	11
+4	Zürich	JP	2.50	5
+3	Bern	JP	2.00	1
+3	Grindelwald	JP	3.33	6
+3	Luzern	JP	3.50	5
+3	Wengen	JP	3.00	2
+3	Zermatt	JP	3.25	11
+3	Zürich	JP	2.00	2
+2	Alpnachstad	JP	3.00	1
+2	Bern	JP	2.00	2
+2	Grindelwald	JP	3.50	4
+2	Interlaken	JP	2.00	2
+2	Luzern	JP	3.00	12
+2	Zermatt	JP	2.67	7
+2	Zürich	JP	3.33	6
+1	Alpnachstad	JP	3.00	2
+1	Basel	JP	2.00	2
+1	Bern	JP	2.50	8
+1	Chur	JP	2.00	2
+1	Engelberg	JP	3.00	3
+1	Grindelwald	JP	3.40	12
+1	Interlaken	JP	2.00	2
+1	Jungfraujoch	JP	2.00	2
+1	Luzern	JP	2.67	20
+1	Mürren	JP	3.00	1
+1	Rigi Kulm	JP	2.00	1
+1	Vitznau	JP	3.00	1
+1	Wengen	JP	3.00	2
+1	Zermatt	JP	3.33	7
+1	Zürich	JP	3.00	19
+0	Alpnachstad	JP	2.50	4
+0	Bern	JP	2.00	1
+0	Engelberg	JP	3.00	2
+0	Grindelwald	JP	3.00	6
+0	Interlaken	JP	2.00	3
+0	Kriens	JP	2.67	9
+0	Luzern	JP	3.30	39
+0	Vitznau	JP	3.00	1
+0	Zermatt	JP	3.50	3
+0	Zürich	JP	3.00	12
+-1	Alpnachstad	JP	3.00	3
+-1	Bern	JP	2.50	9
+-1	Engelberg	JP	3.00	2
+-1	Grindelwald	JP	3.60	11
+-1	Interlaken	JP	3.00	1
+-1	Jungfraujoch	JP	3.00	2
+-1	Kriens	JP	3.33	7
+-1	Luzern	JP	3.00	24
+-1	Mürren	JP	2.00	2
+-1	Vitznau	JP	3.00	1
+-1	Wengen	JP	3.00	3
+-1	Zürich	JP	3.14	17
+-1	Zürich Flughafen	JP	3.50	4
+-2	Grindelwald	JP	3.33	8
+-2	Interlaken	JP	2.00	2
+-2	Luzern	JP	2.40	15
+-2	Mürren	JP	3.00	3
+-2	Wengen	JP	5.00	3
+-2	Zermatt	JP	3.00	4
+-2	Zürich	JP	3.00	8
+-2	Zürich Flughafen	JP	3.00	1
+-3	Grindelwald	JP	2.00	6
+-3	Luzern	JP	3.33	8
+-3	Mürren	JP	2.50	3
+-3	Wengen	JP	5.00	1
+-3	Zermatt	JP	3.25	8
+-3	Zürich	JP	2.33	7
+-3	Zürich Flughafen	JP	2.00	2
+-4	Grindelwald	JP	2.50	4
+-4	Luzern	JP	5.00	4
+-4	Mürren	JP	2.00	2
+-4	Zermatt	JP	3.67	6
+-4	Zürich	JP	3.50	3
+-5	Grindelwald	JP	8.00	1
+-5	Luzern	JP	1.00	3
+-5	Zermatt	JP	4.00	5
+-5	Zürich	JP	5.00	2
+-6	Genève	JP	5.00	2
+-6	Luzern	JP	2.00	3
+-6	Zermatt	JP	3.00	3
+-6	Zürich	JP	3.00	2
+-7	Genève	JP	2.00	1
+-7	Luzern	JP	1.50	5
+-7	Zermatt	JP	2.00	3
+-7	Zürich	JP	2.00	2
+-8	Luzern	JP	2.00	3
+-8	Zermatt	JP	2.00	2
+-8	Zürich	JP	2.00	2
+-9	Luzern	JP	1.00	2
+-9	Zermatt	JP	2.00	1
+-9	Zürich	JP	2.50	3
+10	Luzern	RU	2.00	6
+9	Luzern	RU	2.00	14
+8	Bern	RU	2.00	2
+8	Luzern	RU	1.75	14
+8	Mendrisio	RU	3.00	3
+8	Zürich	RU	2.50	4
+7	Luzern	RU	2.00	14
+7	Zürich	RU	2.50	3
+6	Luzern	RU	2.00	14
+6	Zürich	RU	2.00	3
+5	Bern	RU	5.00	3
+5	Luzern	RU	2.00	14
+5	Zürich	RU	2.50	3
+4	Luzern	RU	4.20	17
+4	Zürich	RU	2.67	8
+3	Bern	RU	2.33	6
+3	Interlaken	RU	1.00	2
+3	Lausanne	RU	2.00	2
+3	Luzern	RU	2.00	19
+3	Mendrisio	RU	5.00	3
+3	Zürich	RU	3.33	7
+2	Affoltern am Albis	RU	3.00	1
+2	Basel	RU	1.00	2
+2	Bern	RU	3.00	6
+2	Engelberg	RU	5.00	2
+2	Luzern	RU	2.50	23
+2	Renens VD	RU	3.00	1
+2	Zug	RU	3.00	1
+2	Zürich	RU	3.60	15
+1	Bern	RU	2.33	6
+1	Genève	RU	2.00	2
+1	Interlaken	RU	2.00	3
+1	Kriens	RU	4.00	4
+1	Luzern	RU	2.57	26
+1	Monte Carasso	RU	2.00	2
+1	Montreux	RU	2.00	2
+1	Mürren	RU	3.50	3
+1	Winterthur	RU	2.00	1
+1	Zürich	RU	3.50	21
+0	Alpnachstad	RU	2.50	5
+0	Bern	RU	2.25	7
+0	Interlaken	RU	3.33	6
+0	Kriens	RU	2.80	17
+0	Luzern	RU	3.00	63
+0	Zürich	RU	3.17	17
+-1	Bern	RU	3.00	9
+-1	Grindelwald	RU	2.50	2
+-1	Interlaken	RU	5.00	2
+-1	Kriens	RU	2.00	3
+-1	Luzern	RU	2.70	32
+-1	Mendrisio	RU	5.00	2
+-1	Montreux	RU	2.00	2
+-1	Zermatt	RU	3.00	2
+-1	Zürich	RU	2.88	25
+-1	Zürich Flughafen	RU	2.00	3
+-2	Affoltern am Albis	RU	2.00	1
+-2	Bern	RU	3.00	4
+-2	Engelberg	RU	5.00	2
+-2	Genève	RU	2.00	2
+-2	Interlaken	RU	2.50	6
+-2	Luzern	RU	3.71	27
+-2	Zürich	RU	5.20	12
+-2	Zürich Flughafen	RU	2.00	2
+-3	Genève	RU	3.33	5
+-3	Luzern	RU	2.00	21
+-3	Zürich	RU	3.00	9
+-3	Zürich Flughafen	RU	2.50	2
+-4	Genève	RU	2.00	1
+-4	Luzern	RU	2.20	23
+-4	Mendrisio	RU	5.00	2
+-4	Zürich	RU	3.67	7
+-5	Bern	RU	3.00	2
+-5	Genève	RU	3.00	1
+-5	Luzern	RU	2.20	19
+-5	Zürich	RU	3.50	4
+-6	Bern	RU	2.00	1
+-6	Luzern	RU	1.75	21
+-6	Zürich	RU	2.00	2
+-7	Basel	RU	5.00	2
+-7	Luzern	RU	2.40	18
+-7	Zürich	RU	2.00	2
+-8	Luzern	RU	2.60	21
+-9	Genève	RU	2.00	2
+-9	Luzern	RU	2.20	19
+-10	Luzern	RU	1.75	13
+9	Luzern	TH	3.00	1
+7	Luzern	TH	2.00	1
+6	Luzern	TH	2.50	3
+5	Luzern	TH	2.50	4
+3	Luzern	TH	2.50	4
+2	Luzern	TH	2.00	5
+2	Zürich	TH	13.00	1
+1	Luzern	TH	4.00	10
+0	Interlaken	TH	8.00	2
+0	Luzern	TH	6.17	20
+0	Zürich	TH	13.00	1
+-1	Bern	TH	5.00	2
+-1	Interlaken	TH	5.00	1
+-1	Luzern	TH	6.80	11
+-1	Zürich	TH	9.00	5
+-2	Chur	TH	5.00	2
+-2	Luzern	TH	2.33	5
+-3	Luzern	TH	2.00	2
+-3	Mendrisio	TH	5.00	2
+-4	Luzern	TH	2.00	3
+-5	Luzern	TH	3.00	2
+-6	Luzern	TH	2.00	1
+-7	Luzern	TH	2.00	3
+-8	Luzern	TH	2.00	1
+10	Genève	US	3.00	1
+10	Luzern	US	2.00	2
+10	Zürich	US	3.00	2
+9	Basel	US	3.00	2
+9	Genève	US	5.00	2
+9	Luzern	US	1.75	10
+9	Zermatt	US	5.00	1
+9	Zürich	US	2.00	3
+8	Basel	US	3.00	1
+8	Bern	US	3.00	3
+8	Genève	US	2.00	3
+8	Luzern	US	1.75	8
+8	Zermatt	US	4.00	7
+8	Zürich	US	3.00	9
+7	Basel	US	3.00	2
+7	Bern	US	2.75	6
+7	Genève	US	3.50	3
+7	Interlaken	US	2.00	2
+7	Luzern	US	2.75	11
+7	Zermatt	US	3.00	8
+7	Zürich	US	3.40	15
+7	Zürich Flughafen	US	2.00	2
+6	Basel	US	3.00	1
+6	Bern	US	2.40	10
+6	Genève	US	2.50	6
+6	Glattbrugg	US	2.00	2
+6	Interlaken	US	3.00	2
+6	Lausanne	US	5.00	1
+6	Luzern	US	2.75	11
+6	Montreux	US	3.33	4
+6	Mürren	US	3.00	1
+6	Zermatt	US	3.25	8
+6	Zürich	US	3.40	13
+5	Basel	US	2.50	3
+5	Bern	US	3.00	11
+5	Broc	US	2.00	3
+5	Genève	US	2.75	8
+5	Grindelwald	US	2.00	1
+5	Interlaken	US	2.80	11
+5	Lausanne	US	3.00	1
+5	Lauterbrunnen	US	5.00	2
+5	Luzern	US	3.00	14
+5	Montreux	US	2.00	3
+5	Mürren	US	3.00	2
+5	St. Moritz	US	3.50	5
+5	Wengen	US	4.00	4
+5	Zermatt	US	4.25	9
+5	Zürich	US	3.00	17
+5	Zürich Flughafen	US	2.00	2
+4	Basel	US	2.00	3
+4	Bern	US	2.80	10
+4	Broc	US	2.00	2
+4	Genève	US	2.00	4
+4	Grindelwald	US	4.00	4
+4	Interlaken	US	3.00	9
+4	Jungfraujoch	US	3.00	2
+4	Lausanne	US	2.00	2
+4	Lauterbrunnen	US	3.50	4
+4	Lugano	US	3.00	1
+4	Luzern	US	2.60	19
+4	Montreux	US	4.00	3
+4	Mürren	US	3.00	4
+4	St. Moritz	US	3.00	2
+4	Wengen	US	2.50	4
+4	Zermatt	US	3.75	10
+4	Zürich	US	2.50	19
+4	Zürich Flughafen	US	2.00	2
+3	Basel	US	2.50	5
+3	Bern	US	3.60	14
+3	Broc	US	2.00	3
+3	Genève	US	3.75	12
+3	Grindelwald	US	3.67	7
+3	Interlaken	US	3.33	18
+3	Jungfraujoch	US	3.00	3
+3	Kriens	US	2.50	3
+3	Lausanne	US	2.50	2
+3	Lauterbrunnen	US	2.00	3
+3	Luzern	US	2.78	30
+3	Montreux	US	2.00	2
+3	Mürren	US	2.67	11
+3	Pratteln	US	2.00	2
+3	St. Moritz	US	3.00	5
+3	Visp	US	2.00	1
+3	Wengen	US	3.25	9
+3	Zermatt	US	3.25	14
+3	Zürich	US	3.11	33
+3	Zürich Flughafen	US	2.00	3
+2	Basel	US	2.33	9
+2	Bern	US	3.00	14
+2	Chur	US	3.00	1
+2	Engelberg	US	4.67	6
+2	Genève	US	2.33	9
+2	Glattbrugg	US	3.00	2
+2	Grindelwald	US	3.33	8
+2	Interlaken	US	3.57	23
+2	Jungfraujoch	US	3.00	3
+2	Kriens	US	3.00	8
+2	Lauterbrunnen	US	2.50	6
+2	Luzern	US	3.22	54
+2	Montreux	US	2.00	1
+2	Mürren	US	2.75	11
+2	St. Gallen	US	3.00	2
+2	St. Moritz	US	4.00	4
+2	Stans	US	2.00	2
+2	Wengen	US	3.60	10
+2	Zermatt	US	3.50	14
+2	Zürich	US	3.33	44
+2	Zürich Flughafen	US	2.00	5
+1	Alpnachstad	US	3.50	6
+1	Basel	US	3.00	12
+1	Bern	US	2.50	26
+1	Broc	US	2.00	2
+1	Engelberg	US	2.60	15
+1	Genève	US	2.00	6
+1	Glattbrugg	US	5.00	2
+1	Goldau	US	2.00	2
+1	Grindelwald	US	2.50	11
+1	Hergiswil NW	US	3.00	1
+1	Interlaken	US	3.38	27
+1	Jungfraujoch	US	3.00	3
+1	Kriens	US	2.80	19
+1	Lauterbrunnen	US	2.50	5
+1	Lugano	US	3.75	8
+1	Luzern	US	3.62	97
+1	Monte Carasso	US	1.50	8
+1	Montreux	US	5.00	2
+1	Mürren	US	5.25	10
+1	Pratteln	US	2.00	5
+1	Rigi Kulm	US	3.00	2
+1	St. Gallen	US	3.00	1
+1	St. Moritz	US	13.00	2
+1	Stans	US	2.50	4
+1	Weggis	US	3.00	8
+1	Wengen	US	4.33	9
+1	Zermatt	US	3.25	10
+1	Zürich	US	3.00	63
+1	Zürich Flughafen	US	2.00	5
+0	Affoltern am Albis	US	2.00	2
+0	Alpnachstad	US	3.00	16
+0	Basel	US	2.50	6
+0	Bellinzona	US	2.00	7
+0	Bern	US	2.80	14
+0	Brunnen	US	5.00	1
+0	Engelberg	US	2.50	29
+0	Genève	US	2.00	2
+0	Glattbrugg	US	5.00	3
+0	Goldau	US	2.00	3
+0	Grindelwald	US	3.00	4
+0	Interlaken	US	3.14	20
+0	Kriens	US	2.50	48
+0	Lugano	US	2.50	2
+0	Luzern	US	3.69	146
+0	Monte Carasso	US	2.50	4
+0	Mürren	US	3.67	7
+0	Pratteln	US	2.00	3
+0	Rigi Kaltbad	US	5.00	1
+0	Rigi Kulm	US	2.00	3
+0	Stans	US	2.67	11
+0	Weggis	US	2.67	6
+0	Wengen	US	3.50	5
+0	Zürich	US	3.00	43
+0	Zürich Flughafen	US	2.00	7
+-1	Affoltern am Albis	US	3.00	2
+-1	Alpnachstad	US	2.50	7
+-1	Basel	US	2.00	12
+-1	Bellinzona	US	2.00	7
+-1	Bern	US	3.33	20
+-1	Broc	US	3.00	2
+-1	Chur	US	3.00	2
+-1	Engelberg	US	3.17	22
+-1	Genève	US	2.75	9
+-1	Glattbrugg	US	3.00	3
+-1	Goldau	US	2.00	1
+-1	Grindelwald	US	2.75	13
+-1	Hergiswil NW	US	2.00	1
+-1	Interlaken	US	3.30	36
+-1	Jungfraujoch	US	3.00	3
+-1	Kriens	US	3.20	22
+-1	Lausanne	US	2.50	3
+-1	Lauterbrunnen	US	2.50	6
+-1	Lugano	US	2.00	2
+-1	Luzern	US	3.77	87
+-1	Mürren	US	3.60	12
+-1	Pratteln	US	2.00	2
+-1	Rigi Kulm	US	2.00	2
+-1	Stans	US	2.50	6
+-1	Thun	US	5.00	1
+-1	Weggis	US	4.00	4
+-1	Wengen	US	4.00	8
+-1	Zermatt	US	3.33	6
+-1	Zürich	US	3.18	41
+-1	Zürich Flughafen	US	2.00	17
+-2	Basel	US	2.33	7
+-2	Bellinzona	US	1.00	3
+-2	Bern	US	3.00	25
+-2	Broc	US	2.00	3
+-2	Chur	US	2.00	2
+-2	Engelberg	US	3.00	10
+-2	Genève	US	2.75	12
+-2	Glattbrugg	US	3.00	3
+-2	Grindelwald	US	3.20	14
+-2	Interlaken	US	3.89	29
+-2	Jungfraujoch	US	3.00	3
+-2	Kriens	US	3.67	7
+-2	Lausanne	US	3.00	4
+-2	Lauterbrunnen	US	3.50	5
+-2	Lugano	US	4.00	3
+-2	Luzern	US	3.56	46
+-2	Montreux	US	5.00	2
+-2	Mürren	US	3.60	12
+-2	Rigi Kulm	US	2.00	1
+-2	St. Moritz	US	3.00	3
+-2	Thun	US	3.00	2
+-2	Wengen	US	3.40	14
+-2	Zermatt	US	2.67	9
+-2	Zug	US	2.00	2
+-2	Zürich	US	2.75	35
+-2	Zürich Flughafen	US	1.75	12
+-3	Basel	US	3.50	7
+-3	Bern	US	3.67	16
+-3	Broc	US	3.00	3
+-3	Engelberg	US	3.00	3
+-3	Genève	US	3.00	11
+-3	Glattbrugg	US	3.00	3
+-3	Grindelwald	US	3.40	12
+-3	Interlaken	US	3.43	21
+-3	Jungfraujoch	US	2.00	3
+-3	Kriens	US	3.00	3
+-3	Lausanne	US	3.33	5
+-3	Lauterbrunnen	US	2.33	6
+-3	Lugano	US	3.00	1
+-3	Luzern	US	3.25	29
+-3	Montreux	US	3.25	6
+-3	Mürren	US	4.00	12
+-3	Wengen	US	3.40	11
+-3	Zermatt	US	3.00	7
+-3	Zürich	US	3.20	33
+-3	Zürich Flughafen	US	2.00	9
+-4	Basel	US	5.50	3
+-4	Bern	US	2.20	14
+-4	Broc	US	3.00	1
+-4	Engelberg	US	3.00	1
+-4	Genève	US	3.25	11
+-4	Glattbrugg	US	3.00	1
+-4	Grindelwald	US	2.50	8
+-4	Interlaken	US	3.00	12
+-4	Jungfraujoch	US	2.00	2
+-4	Kriens	US	3.00	3
+-4	Lausanne	US	3.50	5
+-4	Lauterbrunnen	US	2.00	1
+-4	Luzern	US	3.43	23
+-4	Montreux	US	3.50	3
+-4	Mürren	US	2.67	6
+-4	St. Moritz	US	5.00	1
+-4	Wengen	US	3.33	7
+-4	Zermatt	US	3.00	9
+-4	Zürich	US	3.13	25
+-4	Zürich Flughafen	US	2.50	10
+-5	Basel	US	5.00	2
+-5	Bern	US	3.00	13
+-5	Broc	US	2.00	1
+-5	Engelberg	US	5.00	1
+-5	Genève	US	3.00	9
+-5	Grindelwald	US	2.50	5
+-5	Interlaken	US	2.00	3
+-5	Lausanne	US	6.33	5
+-5	Lauterbrunnen	US	2.50	2
+-5	Lugano	US	8.00	1
+-5	Luzern	US	3.80	14
+-5	Montreux	US	3.00	2
+-5	Mürren	US	5.00	3
+-5	St. Moritz	US	5.00	3
+-5	Wengen	US	3.33	4
+-5	Zermatt	US	3.33	8
+-5	Zürich	US	3.43	21
+-5	Zürich Flughafen	US	2.00	5
+-6	Basel	US	3.00	3
+-6	Bern	US	3.00	7
+-6	Broc	US	2.00	2
+-6	Genève	US	3.33	6
+-6	Interlaken	US	2.00	1
+-6	Lausanne	US	5.00	3
+-6	Luzern	US	4.40	15
+-6	Montreux	US	5.00	3
+-6	Mürren	US	3.00	2
+-6	Wengen	US	2.50	4
+-6	Zermatt	US	3.00	6
+-6	Zürich	US	3.17	15
+-6	Zürich Flughafen	US	2.50	4
+-7	Basel	US	4.00	3
+-7	Bern	US	3.00	4
+-7	Genève	US	3.25	10
+-7	Grindelwald	US	3.00	1
+-7	Interlaken	US	2.00	2
+-7	Lausanne	US	3.00	1
+-7	Luzern	US	3.50	15
+-7	Mürren	US	3.00	1
+-7	St. Moritz	US	8.00	2
+-7	Wengen	US	2.00	2
+-7	Zermatt	US	3.33	5
+-7	Zürich	US	3.25	10
+-7	Zürich Flughafen	US	2.50	5
+-8	Bern	US	1.00	1
+-8	Genève	US	4.00	6
+-8	Grindelwald	US	3.00	2
+-8	Lausanne	US	5.00	1
+-8	Luzern	US	2.50	12
+-8	Mürren	US	4.00	4
+-8	Zermatt	US	3.00	2
+-8	Zürich	US	4.00	7
+-8	Zürich Flughafen	US	2.00	2
+-9	Genève	US	2.00	1
+-9	Luzern	US	2.50	12
+-9	Zürich	US	2.00	2
+-9	Zürich Flughafen	US	2.00	2
+-10	Luzern	US	3.00	5
+-10	Zürich	US	2.00	4
+-10	Zürich Flughafen	US	2.00	2
 </pre>
